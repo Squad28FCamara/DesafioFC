@@ -1,8 +1,8 @@
 import { getRepository } from 'typeorm';
 import { hash } from 'bcryptjs';
 
-import AppError from 'errors/AppError';
-import User from 'users/User';
+import AppError from '../errors/AppError';
+import User from '../entities/users/User';
 
 interface IRequest {
   name: string;
@@ -40,3 +40,5 @@ class CreateUserService {
     return user;
   }
 }
+
+export default CreateUserService;

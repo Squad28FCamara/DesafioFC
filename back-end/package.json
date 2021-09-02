@@ -5,11 +5,11 @@
    "main": "server.ts",
    "scripts": {
       "dev": "ts-node-dev --transpile-only --clear src/server.ts",
-      "migration:create": "ts-node-dev ./node_modules/typeorm/cli.js migration:create -n",
+      "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js",
       "start": "ts-node src/index.ts"
    },
    "keywords": [],
-   "author": "",
+   "author": "Matheus Freitas",
    "license": "ISC",
    "devDependencies": {
       "@types/bcryptjs": "^2.4.2",
@@ -25,6 +25,7 @@
       "mysql": "^2.14.1",
       "pg": "^8.7.1",
       "reflect-metadata": "^0.1.10",
-      "typeorm": "0.2.37"
+      "typeorm": "0.2.37",
+      "uuidv4": "^6.2.12"
    }
 }

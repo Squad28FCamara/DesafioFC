@@ -5,13 +5,13 @@ class User {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  @Column('varchar', { name: 'name' })
+  @Column()
   name: string;
 
-  @Column('varchar', { name: 'email' })
+  @Column()
   email: string;
 
-  @Column('varchar', { name: 'password' })
+  @Column()
   password: string;
 }
 

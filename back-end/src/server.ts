@@ -1,5 +1,5 @@
 import express from 'express';
-import routes from './users/routes';
+import routes from './routes/';
 
 import './database';
 
