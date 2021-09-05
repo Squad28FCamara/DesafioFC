@@ -6,21 +6,23 @@ import AppError from '../errors/AppError';
 import authConfig from '../config/auth';
 import User from '../entities/users/User';
 
-interface IRequest {
+interface Request {
   email: string;
   password: string;
 }
 
-interface IResponse {
+interface Response {
   user: User;
   token: string;
 }
 
 class AuthenticateUserService {
-  public async execute({ email, password }: IRequest): Promise<IResponse> {
+  public async execute({ email, password }: Request): Promise<Response> {
     const usersRepository = getRepository(User);
 
     const user = await usersRepository.findOne({ where: { email } });
+
+    console.log(user.name);
 
     if (!user) {
       throw new AppError('Incorrect email/password combination.', 401);
@@ -37,6 +39,7 @@ class AuthenticateUserService {
       subject: user.id,
       expiresIn,
     });
+
     return {
       user,
       token,

@@ -1,6 +1,6 @@
 import { getRepository } from 'typeorm';
 import { hash } from 'bcryptjs';
-import { uuid } from 'uuidv4';
+import { v4 } from 'uuid';
 
 import AppError from '../errors/AppError';
 import User from '../entities/users/User';
@@ -30,7 +30,7 @@ class CreateUserService {
 
     //cria o usuario
     const user = usersRepository.create({
-      id: uuid(),
+      id: v4(),
       name,
       email,
       password: hashedPassword,
