@@ -45,3 +45,5 @@ class AuthenticateUserService {
     };
   }
 }
+
+export default AuthenticateUserService;
