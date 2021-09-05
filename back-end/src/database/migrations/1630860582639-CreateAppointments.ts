@@ -14,6 +14,10 @@ export class CreateAppointments1630860582639 implements MigrationInterface {
             default: 'uuid_generate_v4()',
           },
           {
+            name: 'provider',
+            type: 'varchar',
+          },
+          {
             name: 'date',
             type: 'timestamp with time zone',
           },
