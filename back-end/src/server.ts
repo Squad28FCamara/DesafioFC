@@ -12,6 +12,7 @@ app.use(express.json());
 app.use(routes);
 app.use(error);
 
+// rota de teste, para ver se o servidor está de fato respondendo
 app.get('/', (request, response) => {
   return response.json({
     message: 'Hello World!',
@@ -21,7 +22,7 @@ app.get('/', (request, response) => {
 app.listen(3333, () => {
   console.log('Server Started');
   console.log('link: http://localhost:3333');
-  console.log('ROUTES: "/"');
+  console.log('ROUTES: "/", "/users", "/sessions"');
 });
 
 /*email, nome, data da reserva */
