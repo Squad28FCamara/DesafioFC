@@ -1,5 +1,12 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
-import { uuid } from 'uuidv4';
+import {
+  Column,
+  CreateDateColumn,
+  Entity,
+  JoinColumn,
+  ManyToMany,
+  ManyToOne,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
 import User from '../users/User';
 
 @Entity('Appointments')
@@ -9,4 +16,19 @@ class Appointment {
 
   @Column()
   provider_id: string;
+
+  @ManyToOne(() => User)
+  @JoinColumn({
+    name: 'provider_id',
+  })
+  provider: User;
+
+  @Column('timestamp with time zone')
+  date: Date;
+
+  @CreateDateColumn()
+  created_at: Date;
+
+  @Column()
+  chairs: number;
 }
