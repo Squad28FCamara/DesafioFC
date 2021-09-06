@@ -32,3 +32,5 @@ class Appointment {
   @Column()
   chairs: number;
 }
+
+export default Appointment;
