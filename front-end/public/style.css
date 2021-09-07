@@ -90,7 +90,7 @@
   align-items: center;
 }
 
-.container .main {
+.container main {
   grid-area: main;
-  background-color: #ffff64;
+  background-color: #555555;
 }

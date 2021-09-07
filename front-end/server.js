@@ -22,12 +22,14 @@ global.logger = winston.createLogger({
 
 app.use(express.static("public"));
 app.use(express.static("assets"));
-app.set("view engine", "njk");
 app.use(router);
+
+app.set("view engine", "njk");
 
 nunjucks.configure("views", {
   express: app,
   noCache: true,
+  autoescape: false,
 });
 
 app.get("/", router);

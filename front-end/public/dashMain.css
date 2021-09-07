@@ -1,0 +1,36 @@
+.card {
+  background-color: #f8f8f8;
+  width: 27vw;
+  height: 30vh;
+  border-radius: 40px;
+  margin-top: 51px;
+  margin-left: 95px;
+}
+
+.card .card-info {
+  height: 11.8vh;
+  width: 13.2vw;
+  margin-top: 4.9vw;
+}
+
+.card .card-info h1 {
+  font-size: 1.8rem;
+  color: #333333;
+  margin-bottom: 4px;
+}
+
+.card .card-info p {
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  color: #866a6a;
+}
+
+.card .card-info button {
+  background-color: #4f4f4f;
+  width: 160px;
+  padding: 9px 41px;
+  font-weight: 700;
+  color: #ffffff;
+  border-radius: 10px;
+  margin-top: 24px;
+}
