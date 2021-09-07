@@ -6,7 +6,8 @@
   "password": "docker",
   "database": "desafioFC_postgres",
   "entities": [
-    "./src/entities/users/*.ts"
+    "./src/entities/users/*.ts",
+    "./src/entities/appointments/*.ts"
   ],
   "migrations": [
     "./src/database/migrations/*.ts"
