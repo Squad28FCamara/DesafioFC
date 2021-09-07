@@ -30,7 +30,7 @@ class Appointment {
   created_at: Date;
 
   @Column()
-  chairs: number;
+  station: number;
 }
 
 export default Appointment;

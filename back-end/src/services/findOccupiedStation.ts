@@ -2,7 +2,7 @@ import { getRepository } from 'typeorm';
 
 import Appointment from '../entities/appointments/Appointment';
 
-class FindOccupiedChairs {
+class FindOccupiedStation {
   public async execute(date: Date) {
     const appointmentsRepository = getRepository(Appointment);
 
@@ -16,4 +16,4 @@ class FindOccupiedChairs {
   }
 }
 
-export default FindOccupiedChairs;
+export default FindOccupiedStation;
