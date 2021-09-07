@@ -9,12 +9,14 @@ import AppointmentsRepository from '../repositories/appointmentsRepository';
 interface ICreateAppointment {
   date: Date;
   provider_id: string;
+  station: string;
 }
 
 class createAppointmentService {
   public async execute({
     date,
     provider_id,
+    station,
   }: ICreateAppointment): Promise<Appointment> {
     const appointmentsRepository = getCustomRepository(AppointmentsRepository);
     const appointmentDate = startOfHour(date);
@@ -29,6 +31,7 @@ class createAppointmentService {
     const appointment = appointmentsRepository.create({
       provider_id,
       date: appointmentDate,
+      station,
     });
 
     await appointmentsRepository.save(appointment);

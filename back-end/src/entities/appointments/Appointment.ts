@@ -9,7 +9,7 @@ import {
 } from 'typeorm';
 import User from '../users/User';
 
-@Entity('Appointments')
+@Entity('appointments')
 class Appointment {
   @PrimaryGeneratedColumn('uuid')
   id: string;
@@ -18,10 +18,8 @@ class Appointment {
   provider_id: string;
 
   @ManyToOne(() => User)
-  @JoinColumn({
-    name: 'provider_id',
-  })
-  provider: User;
+  @JoinColumn({ name: 'provider_id' })
+  AppointmentProvider: User;
 
   @Column('timestamp with time zone')
   date: Date;
@@ -30,7 +28,7 @@ class Appointment {
   created_at: Date;
 
   @Column()
-  station: number;
+  station: string;
 }
 
 export default Appointment;
