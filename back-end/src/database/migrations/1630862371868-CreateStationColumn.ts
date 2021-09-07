@@ -1,4 +1,3 @@
-import { table } from 'console';
 import { MigrationInterface, QueryRunner, TableColumn } from 'typeorm';
 
 export class CreateChairColumn1630862371868 implements MigrationInterface {

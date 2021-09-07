@@ -22,7 +22,7 @@ app.get('/', (request, response) => {
 app.listen(3333, () => {
   console.log('Server Started');
   console.log('link: http://localhost:3333');
-  console.log('ROUTES: "/", "/users", "/sessions"');
+  console.log('ROUTES: "/", "/users", "/sessions", "/appointments"');
 });
 
 /*email, nome, data da reserva */

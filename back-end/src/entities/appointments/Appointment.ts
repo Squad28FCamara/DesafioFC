@@ -29,6 +29,9 @@ class Appointment {
 
   @Column()
   station: string;
+
+  @Column()
+  pole: string;
 }
 
 export default Appointment;
