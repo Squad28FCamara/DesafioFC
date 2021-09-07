@@ -6,13 +6,13 @@ export class CreateChairColumn1630862371868 implements MigrationInterface {
     await queryRunner.addColumn(
       'appointments',
       new TableColumn({
-        name: 'chairs',
-        type: 'integer',
+        name: 'station',
+        type: 'varchar',
       })
     );
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.dropColumn('appointments', 'chairs');
+    await queryRunner.dropColumn('appointments', 'station');
   }
 }
