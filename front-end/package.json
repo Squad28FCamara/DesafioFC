@@ -13,8 +13,7 @@
   "type": "module",
   "dependencies": {
     "express": "^4.17.1",
-    "nunjucks": "^3.2.3",
-    "winston": "^3.3.3"
+    "nunjucks": "^3.2.3"
   },
   "devDependencies": {
     "browser-sync": "^2.27.5",
