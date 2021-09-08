@@ -20,15 +20,12 @@ class CreateUserService {
       where: { email },
     });
 
-    //verifica se o email ja está no banco de dados
     if (checkUserExists) {
       throw new AppError('Email address already used');
     }
 
-    //criptografa a senha
     const hashedPassword = await hash(password, 8);
 
-    //cria o usuario
     const user = usersRepository.create({
       id: v4(),
       name,
@@ -36,7 +33,6 @@ class CreateUserService {
       password: hashedPassword,
     });
 
-    //salva o usuario
     await usersRepository.save(user);
 
     return user;
