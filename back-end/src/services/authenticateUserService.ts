@@ -4,7 +4,7 @@ import { sign } from 'jsonwebtoken';
 
 import AppError from '../errors/AppError';
 import authConfig from '../config/auth';
-import User from '../entities/users/User';
+import User from '../../modules/users/infra/typeorm/entities/User';
 
 interface IRequest {
   email: string;

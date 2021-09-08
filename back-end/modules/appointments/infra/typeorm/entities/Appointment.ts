@@ -7,7 +7,7 @@ import {
   ManyToOne,
   PrimaryGeneratedColumn,
 } from 'typeorm';
-import User from '../../../../../src/entities/users/User';
+import User from '../../../../users/infra/typeorm/entities/User';
 
 @Entity('appointments')
 class Appointment {
