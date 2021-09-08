@@ -4,7 +4,7 @@ import express from 'express';
 import routes from './routes/';
 
 import './database';
-import error from './middlewares/error';
+import error from '../modules/users/infra/typeorm/middlewares/error';
 
 const app = express();
 
