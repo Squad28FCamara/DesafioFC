@@ -4,7 +4,7 @@
    "description": "",
    "main": "server.ts",
    "scripts": {
-      "dev": "ts-node-dev --transpile-only --clear src/server.ts",
+      "dev": "ts-node-dev -r tsconfig-paths/resgister --transpile-only --clear src/server.ts",
       "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js",
       "start": "ts-node src/index.ts"
    },
@@ -28,6 +28,7 @@
       "jsonwebtoken": "^8.5.1",
       "pg": "^8.7.1",
       "reflect-metadata": "^0.1.10",
+      "tsconfig-paths": "^3.11.0",
       "typeorm": "0.2.37",
       "uuidv4": "^6.2.12"
    }
