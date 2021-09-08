@@ -1,6 +1,6 @@
 import { getRepository } from 'typeorm';
 
-import Appointment from '../entities/appointments/Appointment';
+import Appointment from '../../modules/appointments/infra/typeorm/entities/Appointment';
 
 class FindOccupiedStation {
   public async execute(date: Date) {
