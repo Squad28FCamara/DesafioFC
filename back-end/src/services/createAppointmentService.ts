@@ -27,23 +27,31 @@ class createAppointmentService {
       appointmentDate
     );
 
-    const samePole = appointmentInSameDate.map(
-      (appointment) => appointment.pole === pole
-    );
+    const samePole: Array<Appointment> = [];
+
+    appointmentInSameDate.forEach((appointment) => {
+      if (appointment.pole === pole) {
+        samePole.push(appointment);
+      }
+    });
 
     if (pole === 'SãoPaulo') {
       if (samePole.length === 240) {
-        throw new AppError('This pole is lotado');
+        throw new AppError('This pole is already full');
       }
-    } else {
+    }
+    if (pole === 'Santos') {
       if (samePole.length === 40) {
-        throw new AppError('This pole is lotado');
+        throw new AppError('This pole is already full');
       }
     }
 
-    if (appointmentInSameDate) {
-      throw new AppError('This appointment is already booked');
-    }
+    samePole.forEach((appointment) => {
+      if (appointment.station === station) {
+        throw new AppError('This station is already booked');
+      }
+    });
+
     const appointment = appointmentsRepository.create({
       provider_id,
       date: appointmentDate,
