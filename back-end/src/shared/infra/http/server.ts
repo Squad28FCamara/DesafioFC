@@ -1,10 +1,10 @@
 import 'express-async-errors';
 
 import express from 'express';
-import routes from './infra/http/routes';
+import routes from './routes';
 
 import '../src/database';
-import error from './errors/error';
+import error from '../../errors/error';
 
 const app = express();
 

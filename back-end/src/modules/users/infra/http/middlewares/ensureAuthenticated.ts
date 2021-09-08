@@ -2,7 +2,7 @@ import { Request, Response, NextFunction } from 'express';
 import { verify } from 'jsonwebtoken';
 
 import AppError from '../../../../../shared/errors/AppError';
-import authConfig from '../../../../../src/config/auth';
+import authConfig from '../../../../../config/auth';
 interface ITokenPayLoad {
   iat: number;
   exp: number;
