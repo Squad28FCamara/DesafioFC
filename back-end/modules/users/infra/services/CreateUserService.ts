@@ -2,7 +2,7 @@ import { getRepository } from 'typeorm';
 import { hash } from 'bcryptjs';
 import { v4 } from 'uuid';
 
-import AppError from '../../../../src/errors/AppError';
+import AppError from '../../../../shared/errors/AppError';
 import User from '../typeorm/entities/User';
 
 interface IRequest {
