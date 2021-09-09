@@ -4,7 +4,7 @@ import express from 'express';
 import routes from './routes';
 
 import '@shared/infra/typeorm/';
-import error from '@shared/errors/error';
+import error from '@shared/infra/http/errors/error';
 
 const app = express();
 
