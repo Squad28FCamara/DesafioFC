@@ -4,7 +4,7 @@
    "description": "",
    "main": "server.ts",
    "scripts": {
-      "dev": "ts-node-dev -r tsconfig-paths/resgister --transpile-only --clear src/server.ts",
+      "dev": "ts-node-dev -r tsconfig-paths/register --transpile-only --clear src/shared/infra/http/server.ts",
       "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js",
       "start": "ts-node src/index.ts"
    },

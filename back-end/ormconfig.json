@@ -6,13 +6,14 @@
   "password": "docker",
   "database": "desafioFC_postgres",
   "entities": [
-    "./src/entities/users/*.ts",
-    "./src/entities/appointments/*.ts"
+    "./src/modules/users/infra/typeorm/entities/*.ts",
+    "./src/modules/appointments/infra/typeorm/entities/*.ts"
   ],
   "migrations": [
-    "./src/database/migrations/*.ts"
+    "./src/shared/infra/typeorm/migrations/*.ts"
   ],
   "cli": {
-    "migrationsDir": "./src/database/migrations/"
+    "migrationsDir": "./src/shared/infra/typeorm/migrations/"
   }
 }
+

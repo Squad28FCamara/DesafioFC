@@ -3,8 +3,8 @@ import 'express-async-errors';
 import express from 'express';
 import routes from './routes';
 
-import '../src/database';
-import error from '../../errors/error';
+import '@shared/infra/typeorm/';
+import error from '@shared/errors/error';
 
 const app = express();
 
