@@ -1,5 +1,5 @@
 .card {
-  background-color: #f8f8f8;
+  background-color: #eeebeb;
   width: 27vw;
   height: 30vh;
   border-radius: 40px;
@@ -11,6 +11,7 @@
   height: 11.8vh;
   width: 13.2vw;
   margin-top: 4.9vw;
+  margin: auto;
 }
 
 .card .card-info h1 {
@@ -41,6 +42,9 @@
   font-size: 2.4rem;
   line-height: 2.9rem;
   display: flex;
+  justify-content: space-around;
+  width: 31.2vw;
+  margin: auto;
 }
 
 .reservations div {
