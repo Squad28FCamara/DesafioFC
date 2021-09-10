@@ -1,13 +1,11 @@
 const axios = require('axios');
-const config = require('../config');
+const { base_url } = require('../config');
 
 async function createSession({ email, password }) {
-  const { data } = await axios.post(config.base_url + '/sessions', {
+  const { data } = await axios.post(base_url + '/sessions', {
     email,
     password,
   });
-
-  console.log(data);
 
   return data;
 }
