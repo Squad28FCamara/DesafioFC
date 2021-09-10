@@ -10,7 +10,7 @@
 .card .card-info {
   height: 11.8vh;
   width: 13.2vw;
-  margin: auto;
+  margin-top: 4.9vw;
 }
 
 .card .card-info h1 {
@@ -34,6 +34,7 @@
   border-radius: 10px;
   margin-top: 24px;
 }
+<<<<<<< HEAD
 
 .reservations {
   color: #333333;
@@ -46,3 +47,5 @@
 .reservations div {
   font-size: 16px;
 }
+=======
+>>>>>>> parent of 1eb27fa (winston and .log removed)
