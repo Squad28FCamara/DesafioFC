@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+body {
+  background-color: rgb(228, 228, 228);
+  font-family: "Montserrat", sans-serif;
+}
+
+:root {
+  font-size: 61.5%;
+}
+
+.login {
+  width: 62vw;
+  height: 71vh;
+  background-color: white;
+  border-radius: 20px;
+  margin: auto;
+}
+
+.login p {
+  font-size: 1.6rem;
+}
+
+.login .title {
+  background-color: #4b4fa1;
+  border-radius: 20px 20px 0 0;
+  height: 8.5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login .title h2 {
+  font-size: 2.3rem;
+  color: white;
+}
+
+.login form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.recuperar {
+  width: 47vw;
+  display: flex;
+  justify-content: end;
+  margin-top: 29px;
+  font-size: 1.6rem;
+}
+
+input {
+  width: 47vw;
+  height: 5.5vh;
+}
+
+button {
+  width: 47vw;
+  height: 7.3vh;
+  background-color: #2f2f2f;
+  border-radius: 20px;
+  margin-top: 49px;
+  font-size: 2.3rem;
+  color: #ffff;
+  font-weight: 700;
+}

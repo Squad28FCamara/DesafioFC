@@ -12,6 +12,8 @@ const data = JSON.parse(await readFile("data.json"));
 
 app.use(express.json());
 
+router.get("/login", (req, res) => res.render("login"));
+
 router.get("/", (req, res) => res.render("dashboard", { data }));
 
 router.get("/reserve", (req, res) => res.render("reserve", { data }));
