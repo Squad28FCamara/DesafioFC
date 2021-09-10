@@ -12,33 +12,12 @@
       "estacao": "E106"
     },
     {
-      "date": "01/12/2021",
       "pole": "São Paulo",
-      "estacao": "E107"
+      "date": "2021-09-22"
     },
     {
-      "pole": "São Paulo",
-      "date": "2021-09-09",
-      "andar": "primeiro"
-    },
-    {
-      "pole": "São Paulo",
-      "date": "2021-10-01",
-      "andar": "segundo"
-    },
-    {
-      "pole": "São Paulo",
-      "date": "2021-09-24",
-      "andar": "segundo"
-    },
-    {
-      "pole": "São Paulo",
-      "date": "2021-09-16",
-      "andar": "segundo"
-    },
-    {
-      "pole": "São Paulo",
-      "date": ""
+      "pole": "Santos",
+      "date": "2021-09-23"
     }
   ]
 }

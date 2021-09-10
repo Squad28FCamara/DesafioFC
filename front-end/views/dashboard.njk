@@ -1,21 +1,22 @@
-{% extends 'layout.njk' %}
+{% extends 'layout.njk' %} {% block content %}
 
-{% block content %} 
+<head>
+  <title>Dashboard</title>
+</head>
 
-<head><title>Dashboard</title></head>
-
-<link rel="stylesheet" href="dashMain.css">
+<link rel="stylesheet" href="dashMain.css" />
 
 <section class="card">
-
   <div class="card-info">
     <h1>Informações sobre COVID-19</h1>
-    <p>Conheça os protocolos de segurança adotados para um retorno presencial seguro.</p>  
+    <p>
+      Conheça os protocolos de segurança adotados para um retorno presencial
+      seguro.
+    </p>
     <button>Saiba Mais</button>
-  
   </div>
+</section>
 
-<<<<<<< HEAD
 <section class="reservations">
   <div class="pole">
     <h5>Polo</h5>
@@ -39,17 +40,6 @@
   </div>
 
 
-=======
->>>>>>> parent of 1eb27fa (winston and .log removed)
 </section>
 
-
 {% endblock %}
-<<<<<<< HEAD
- {# {% for reservation in data.reservations%}}
-{{reservation.date}}
-{{reservation.pole}}
-{%endfor%} #}
-=======
-
->>>>>>> parent of 1eb27fa (winston and .log removed)

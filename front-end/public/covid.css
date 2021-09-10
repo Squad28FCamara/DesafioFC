@@ -1,0 +1,26 @@
+.infoCovid {
+  display: flex;
+}
+
+.infocovid .card {
+  width: 14.3vw;
+  border: 1px solid #333333;
+  border-radius: 20px;
+  background-color: #808080;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.infoCovid .card-img {
+  width: 8.3vw;
+  height: 16vh;
+}
+
+.infocovid .card p {
+  margin: auto;
+  text-align: center;
+  width: 11.5vw;
+  font-size: 1.4rem;
+  color: #333333;
+  line-height: 1.7rem;
+}
