@@ -18,6 +18,10 @@
     {
       "pole": "Santos",
       "date": "2021-09-23"
+    },
+    {
+      "date": "",
+      "estation": "EI02"
     }
   ]
 }
