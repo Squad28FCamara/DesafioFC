@@ -20,7 +20,8 @@ appointmentsRouter.get('/', async (request, response) => {
 });
 
 appointmentsRouter.post('/', async (request, response) => {
-  const { provider_id, date, station, pole } = request.body;
+  const { date, station, pole } = request.body;
+  const provider_id = request.user.id;
   const parsedDate = parseISO(date);
 
   const createAppointment = new createAppointmentService();
