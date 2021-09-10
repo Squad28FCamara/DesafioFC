@@ -1,0 +1,30 @@
+{% extends "layout.njk"%} {% block content %}
+<head>
+  <title>Reservar</title>
+  <link rel="stylesheet" href="reserve.css" />
+</head>
+<div class="info">
+  <h2>Reserve uma estação de trabalho</h2>
+  <p>
+    Pensando em sua segurança, os escritórios da FCamara contam com apenas 40%
+    de sua ocupação total
+  </p>
+</div>
+
+<form method="POST" action="/reserve">
+  <h1>Selecione o polo de negócio e data desejada</h1>
+  <div class="item">
+    <span>
+      <input type="radio" name="pole" value="São Paulo" id="SP"/><label for="SP">São Paulo</label>
+      <input type="radio" name="pole" value="Santos"  id="Sts"/><label for="Sts">Santos</label>
+    </span>
+  </div>
+
+  <div class="item">
+    <span> <label for="date">Escolha a data</label> <input type="date" name="date" id="date" /></span>
+  </div>
+
+  <button type="submit">Enviar</button>
+</form>
+
+{% endblock %}

@@ -18,9 +18,32 @@
 </section>
 
 <section class="reservations">
-  <h1>Reservas Recentes</h1>
+  <div class="pole">
+    <h5>Polo</h5>
+    {% for reservation in data.reservations %}
+     <div> {{reservation.pole}}</div>
+    {% endfor %}
+  </div>
 
-  <h2>Polo</h2>
+  <div class="date">
+    <h5>Agendado para</h5>
+    {% for reservation in data.reservations %}
+    <div>{{reservation.date}}</div> 
+    {% endfor %}
+  </div>
+
+  <div class="estation">
+    <h5>Estação</h5>
+    {% for reservation in data.reservations %}
+    <div>{{reservation.estacao}}</div> 
+    {% endfor %}
+  </div>
+
+
 </section>
 
 {% endblock %}
+ {# {% for reservation in data.reservations%}}
+{{reservation.date}}
+{{reservation.pole}}
+{%endfor%} #}

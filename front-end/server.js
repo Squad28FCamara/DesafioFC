@@ -4,6 +4,8 @@ import router from "./router.js";
 
 const app = express();
 
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 app.use(express.static("public"));
 app.use(express.static("assets"));
 app.use(router);
@@ -17,4 +19,12 @@ nunjucks.configure("views", {
 
 app.get("/", router);
 
-app.listen(5000, () => console.log("Server is running"));
+app.post("/", router);
+
+app.listen(5000, () => {
+  try {
+    readFile(global.fileName);
+  } catch (err) {}
+
+  console.log("Server is running");
+});

@@ -1,0 +1,44 @@
+{
+  "name": "Samuel Menecucci",
+  "reservations": [
+    {
+      "date": "15/09/2021",
+      "pole": "São Paulo",
+      "estacao": "E102"
+    },
+    {
+      "date": "27/09/2021",
+      "pole": "Santos",
+      "estacao": "E106"
+    },
+    {
+      "date": "01/12/2021",
+      "pole": "São Paulo",
+      "estacao": "E107"
+    },
+    {
+      "pole": "São Paulo",
+      "date": "2021-09-09",
+      "andar": "primeiro"
+    },
+    {
+      "pole": "São Paulo",
+      "date": "2021-10-01",
+      "andar": "segundo"
+    },
+    {
+      "pole": "São Paulo",
+      "date": "2021-09-24",
+      "andar": "segundo"
+    },
+    {
+      "pole": "São Paulo",
+      "date": "2021-09-16",
+      "andar": "segundo"
+    },
+    {
+      "pole": "São Paulo",
+      "date": ""
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+.info {
+  width: 38vw;
+  margin: auto;
+}
+
+.info h2 {
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+  color: #333333;
+}
+
+.info p {
+  font-size: 1.2rem;
+  color: #828282;
+  line-height: 1.4rem;
+}
+
+form {
+  text-align: center;
+  margin-top: 5vh;
+}
+
+form h1 {
+  font-size: 1.8rem;
+  color: #333333;
+  line-height: 2.2rem;
+}
+
+.item {
+  margin: 10px auto;
+}
+
+.item span {
+  font-size: 1.6rem;
+}
+
+input[type="radio"] {
+  margin-right: 0.6vw;
+}
+/* 
+input[type="radio"] + input[type="radio"] {
+  margin-left: 50px;
+} */
