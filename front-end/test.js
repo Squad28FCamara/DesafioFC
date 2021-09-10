@@ -1,6 +1,5 @@
-import { promises as fs } from "fs";
-const { readFile, writeFile } = fs;
+const { readFileSync } = require('fs');
 
-const data = JSON.parse(await readFile("data.json"));
+const data = JSON.parse(readFileSync("data.json").toString);
 
 console.log(data.reservations);

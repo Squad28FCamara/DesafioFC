@@ -1,16 +1,11 @@
-import express from "express";
-import { create } from "./user.reservation.js";
+const express = require("express");
+const { readFileSync } = require("fs");
 
-import { promises as fs } from "fs";
-const { readFile, writeFile } = fs;
-
-const app = express();
+const create = require("./user.reservation.js");
 
 const router = express.Router();
 
-const data = JSON.parse(await readFile("data.json"));
-
-app.use(express.json());
+const data = JSON.parse(readFileSync("data.json").toString());
 
 router.get("/", (req, res) => res.render("dashboard", { data }));
 
@@ -20,4 +15,4 @@ router.post("/reserve", create);
 
 router.get("/covid", (req, res) => res.render("covid", { data }));
 
-export default router;
+module.exports = router;

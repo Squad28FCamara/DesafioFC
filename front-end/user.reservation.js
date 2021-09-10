@@ -1,10 +1,8 @@
-import { promises as fs } from "fs";
+const { readFileSync, writeFile } = require("fs");
 
-const { readFile, writeFile } = fs;
+const data = JSON.parse(readFileSync("data.json").toString());
 
-const data = JSON.parse(await readFile("data.json"));
-
-export function create(req, res) {
+function create(req, res) {
   const reservation = req.body;
 
   data.reservations.push(reservation);
@@ -13,3 +11,5 @@ export function create(req, res) {
 
   return res.send(data);
 }
+
+module.exports = create

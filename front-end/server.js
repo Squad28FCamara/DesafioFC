@@ -1,6 +1,6 @@
-import express from "express";
-import nunjucks from "nunjucks";
-import router from "./router.js";
+const express = require("express");
+const nunjucks = require("nunjucks");
+const router = require("./router.js");
 
 const app = express();
 
@@ -18,14 +18,4 @@ nunjucks.configure("views", {
   autoescape: false,
 });
 
-app.get("/", router);
-
-app.post("/", router);
-
-app.listen(5000, () => {
-  try {
-    readFile(global.fileName);
-  } catch (err) {}
-
-  console.log("Server is running");
-});
+app.listen(5000, () => console.log("Server is running"));
