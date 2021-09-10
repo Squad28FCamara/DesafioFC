@@ -8,6 +8,10 @@ async function listUserAppointments(token) {
     },
   });
 
+  for (const appointment of data) {
+    appointment.date = appointment.date.split('T')[0];
+  }
+
   return data;
 }
 
