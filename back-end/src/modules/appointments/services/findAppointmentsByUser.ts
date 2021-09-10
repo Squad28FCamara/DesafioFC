@@ -4,14 +4,14 @@ import Appointment from '@modules/appointments/infra/typeorm/entities/Appointmen
 import User from '@modules/users/infra/typeorm/entities/User';
 
 class FindAppointmentsByUser {
-  public async execute(provider_id, id: string) {
+  public async execute(providerId, id: string) {
     const appointmentsRepository = getRepository(Appointment);
     const userRepository = getRepository(User);
 
-    if (provider_id === id) {
+    if (providerId === id) {
       const appointmentsByUser = await appointmentsRepository.find({
         where: {
-          provider_id,
+          providerId,
         },
       });
 

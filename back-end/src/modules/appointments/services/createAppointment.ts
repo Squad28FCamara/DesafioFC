@@ -8,15 +8,15 @@ import AppointmentsRepository from '@modules/appointments/repositories/appointme
 
 interface ICreateAppointment {
   date: Date;
-  provider_id: string;
+  providerId: string;
   station: string;
   pole: string;
 }
 
-class createAppointmentService {
+class createAppointment {
   public async execute({
     date,
-    provider_id,
+    providerId,
     station,
     pole,
   }: ICreateAppointment): Promise<Appointment> {
@@ -53,7 +53,7 @@ class createAppointmentService {
     });
 
     const appointment = appointmentsRepository.create({
-      provider_id,
+      providerId,
       date: appointmentDate,
       station,
       pole,
@@ -65,4 +65,4 @@ class createAppointmentService {
   }
 }
 
-export default createAppointmentService;
+export default createAppointment;

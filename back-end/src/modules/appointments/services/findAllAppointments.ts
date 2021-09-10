@@ -3,13 +3,13 @@ import { getRepository } from 'typeorm';
 import Appointment from '@modules/appointments/infra/typeorm/entities/Appointment';
 
 class FindAllAppointments {
-  public async execute(provider_id?: string) {
+  public async execute(providerId?: string) {
     const appointmentsRepository = getRepository(Appointment);
 
-    if (provider_id) {
+    if (providerId) {
       const appointments = await appointmentsRepository.find({
         where: {
-          provider_id,
+          providerId,
         },
       });
 
