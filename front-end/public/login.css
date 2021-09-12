@@ -14,7 +14,7 @@ body {
   height: 71vh;
   background-color: white;
   border-radius: 20px;
-  margin: auto;
+  margin: auto
 }
 
 .login p {
@@ -35,7 +35,7 @@ body {
   color: white;
 }
 
-.login form {
+.login div {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -49,9 +49,12 @@ body {
   font-size: 1.6rem;
 }
 
+
+
 input {
   width: 47vw;
   height: 5.5vh;
+
 }
 
 button {

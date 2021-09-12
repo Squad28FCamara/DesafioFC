@@ -5,22 +5,41 @@
 
 <body>
   <div class="logo"><img src="fcamara-logo.png" alt="" /></div>
-
   <div class="login">
     <div class="title"><h2>Acessar Portal</h2></div>
-    <form method="POST" action="/session">
-      <div id="email">
+    <test>
+      <div id="emailDiv">
         <p>E-mail</p>
-        <input type="email" />
+        <input type="email" id="email" />
       </div>
+      <test>
       <div id="senha">
         <p>Senha</p>
-        <input type="password" name="" id="" />
+        <input type="password" name="" id="password"/>
+        <button onclick="sendData()">Acessar</button>
+
+        <div class="recuperar">Recuperar Senha</div>
       </div>
 
-      <button type="submit">Acessar</button>
-
-      <div class="recuperar">Recuperar Senha</div>
-    </form>
   </div>
+
+    <script>
+      const emailElement = document.getElementById('email')
+      const passwordElement = document.getElementById('password')
+
+      async function sendData() {
+        const password = passwordElement.value
+        const email = emailElement.value
+        const result = await fetch('http://localhost:3333/sessions', {
+          method: 'POST',
+          body: JSON.stringify({ password, email }),
+          headers: {
+            "Accept": "application/json, text/plain, */*",
+            "Content-Type": "application/json"
+          },
+        })
+
+        const akela = await result.json();
+    }
+    </script>
 </body>
