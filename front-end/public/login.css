@@ -63,4 +63,9 @@ button {
   font-size: 2.3rem;
   color: #ffff;
   font-weight: 700;
+  cursor: pointer;
+}
+
+.recuperar {
+  cursor: pointer;
 }
