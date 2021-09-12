@@ -12,13 +12,21 @@
 <section class="menu">
     <div class="logo"><img src="fcamara-logo.png" alt=""></div>
     <div class="links">
-      <a href="/" ><img src="home.png" alt="" />Dashboard</a>
-      <a href="/reserve"> <img src="calendar.png" alt="" />Reservar</a>
-      <a href="/"><img src="time.png" alt="" />Reservas Recentes</a>
-      <a href="/covid"><img src="covid.png" alt="" /> COVID-19</a>
+      <a href="/" id="dash"><img src="home.png" alt="" />Dashboard</a>
+      <a href="/reserve" id="calendar"> <img src="calendar.png" alt="" />Reservar</a>
+      <a href="/covid" id="covid"><img src="covid.png" alt="" /> COVID-19</a>
       <a href="/"><img src="config.png" alt="" /> Configurações</a>
     </div>
 </section>
+
+<script>
+
+  const menu = document.getElementById('dash ')
+
+  if(window.location.href == "http://localhost:3000/"){
+      menu.classList.add('active')
+  }
+</script>
 
 <main>
   {% block content%} {%endblock%}

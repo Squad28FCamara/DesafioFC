@@ -1,26 +1,36 @@
 .infoCovid {
-  display: flex;
+  margin-top: 2.5vh;
+  margin-left: 8.3vw;
 }
 
-.infocovid .card {
-  width: 14.3vw;
-  border: 1px solid #333333;
-  border-radius: 20px;
-  background-color: #808080;
-  margin: 0 auto;
+.infoCovid .title h1 {
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+}
+
+.infoCovid .title p {
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  width: 27vw;
+  color: #828282;
+}
+
+.infoCovid .cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 70px;
+  margin-top: 54px;
+}
+
+.infoCovid .card {
+  width: 14.2vw;
+  height: 27vh;
   text-align: center;
 }
 
-.infoCovid .card-img {
-  width: 8.3vw;
-  height: 16vh;
-}
-
-.infocovid .card p {
-  margin: auto;
-  text-align: center;
-  width: 11.5vw;
-  font-size: 1.4rem;
-  color: #333333;
-  line-height: 1.7rem;
+.infoCovid .card p {
+  margin-top: 23px;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  color: #828282;
 }

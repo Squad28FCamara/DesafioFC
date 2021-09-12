@@ -1,40 +1,79 @@
-{% extends "layout.njk"%} {% block content %}
+{% extends "layout.njk"%} 
+
+{% block content %}
+
 <head>
-  <title>Reservar</title>
-  <link rel="stylesheet" href="reserve.css" />
+    <title>Reservas</title>
 </head>
-<div class="info">
-  <h2>Reserve uma estação de trabalho</h2>
-  <p>
-    Pensando em sua segurança, os escritórios da FCamara contam com apenas 40%
-    de sua ocupação total
-  </p>
-</div>
 
-<form method="POST" action="/reserve">
-  <h1>Selecione o polo de negócio e data desejada</h1>
-  <div class="item">
-    <span>
-      <input type="radio" name="pole" value="São Paulo" id="SP"/><label for="SP">São Paulo</label>
-      <input type="radio" name="pole" value="Santos"  id="Sts"/><label for="Sts">Santos</label>
-    </span>
-  </div>
+<body>
+    <link rel="stylesheet" href="reserve.css">
+    <link rel="stylesheet" href="popupS.css">
 
-  <div class="item">
-    <span> <label for="date">Escolha a data</label> <input type="date" name="date" id="date" /></span>
-  </div>
+        <div class="info">
+            <h1>Reserve uma estação de trabalho</h1>
+            <p> Pensando em sua segurança, os escritórios da FCamara contam com apenas 40% de sua ocupação total.</p>
+        </div>
 
-  <div class="item">
-    <label for="">Escolha a sua estação</label>
-    <select name="estation" id="">
-      <option value="EI01">Estação 1</option>
-      <option value="EI02">Estação 2</option>
-      <option value="EI03">Estação 3</option>
-      <option value="EI04">Estação 4</option>
-    </select>
-  </div>
+        <form method="POST" action="/reserve">
 
-  <button type="submit">Enviar</button>
-</form>
+            <section class="pole-and-date">
+                <h2>Selecione o polo de negócio e data desejada</h2>
+                    <span>    
+                        <input type="radio" name="pole" value="São Paulo" onclick="able()"> São Paulo
+                        <input type="radio" name="pole" value="Santos" onclick="disable()">Santos
+                        <input type="date" name="date">
+                    </span>
+{#                     
+                    <span>
+                        <input type="date" name="date">
+                    </span> #}
+{# 
+                    <select name="floor" id="floor">
+                            <option value="primeiroAndar">1° Andar</option>
+                            <option value="segundoAndar" >2° Andar</option>
+                    </select> #}
+{# 
+                    <div class="estation">
+                        <img src="estation.png" alt="" srcset="">
+                        <select name="estação">
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
+                            <option value="06">06</option>
+                        </select>
+                    </div> #}
+                
+            </section>
+
+        <button type="submit">Próximo</button>
+
+    </form>
+
+    <script>
+
+        let floor = document.getElementById('floor')
+
+        function disable(){
+        floor.setAttribute("disabled", "true")
+        floor.style.visibility = "hidden"
+        }
+
+        function able() {
+        floor.disabled = false
+        floor.style.visibility = "visible"
+        }
+
+    </script>
+
+
+
+</body>
+
+
+
+
 
 {% endblock %}

@@ -57,6 +57,7 @@
   width: 20.83vw;
   height: 100vh;
   grid-area: nav;
+  position: fixed;
 }
 
 .menu .logo {

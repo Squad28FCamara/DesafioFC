@@ -1,8 +1,12 @@
-{% extends 'layout.njk' %} {% block content %}
+{% extends 'layout.njk' %} 
+
+{% block content %}
 
 <head>
   <title>Dashboard</title>
 </head>
+
+<body>  
 
 <link rel="stylesheet" href="dashMain.css" />
 
@@ -17,7 +21,13 @@
   </div>
 </section>
 
+<div class="reservations-info">
+  <h1>Reservas Resentes</h1>
+  <p>Confira e gerencie as suas últimas reservas</p>
+</div>
+
 <section class="reservations">
+
   <div class="pole">
     <h5>Polo</h5>
     {% for reservation in data.reservations %}
@@ -35,11 +45,13 @@
   <div class="estation">
     <h5>Estação</h5>
     {% for reservation in data.reservations %}
-    <div>{{reservation.estacao}}</div> 
+    <div>{{reservation.estation}}</div> 
     {% endfor %}
   </div>
 
 
 </section>
+
+</body>
 
 {% endblock %}
