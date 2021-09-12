@@ -2,7 +2,7 @@ const axios = require('axios');
 const { base_url } = require('../config');
 
 async function listUserAppointments(token) {
-  const { data } = await axios.get(base_url + '/userappointments', {
+  const { data } = await axios.get(base_url + '/appointments/user', {
     headers: {
       Authorization: 'Bearer ' + token,
     },

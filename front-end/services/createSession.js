@@ -10,4 +10,4 @@ async function createSession({ email, password }) {
   return data;
 }
 
-createSession();
+module.exports = createSession;
