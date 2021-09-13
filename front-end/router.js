@@ -20,6 +20,8 @@ router.get("/reserve", (req, res) => res.render("reserve", { data }));
 
 router.post("/reserve", create);
 
+router.get("/review", (req, res) => res.render("review", { data }));
+
 router.get("/covid", (req, res) => res.render("covid", { data }));
 
 export default router;

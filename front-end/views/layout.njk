@@ -1,12 +1,19 @@
+<!DOCTYPE html>
+  
+</body>
+</html>
+
 {%block layout%}
 
-<link rel="stylesheet" href="style.css">
+
 
 <div class="container">
 
 <header>
     <div class="area">Dashboard</div>
     <div class="user">{{ data.name }} <img src="notification.png" alt="" /></div>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </header>
 
 <section class="menu">
@@ -32,7 +39,8 @@
   {% block content%} {%endblock%}
 </main>
 
-
 </div>
+
+
 
 {%endblock%}

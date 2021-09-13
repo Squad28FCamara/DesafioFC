@@ -45,10 +45,9 @@
   <div class="estation">
     <h5>Estação</h5>
     {% for reservation in data.reservations %}
-    <div>{{reservation.estation}}</div> 
+    <div>{{reservation.station}}{{reservation.seat}}</div> 
     {% endfor %}
   </div>
-
 
 </section>
 
