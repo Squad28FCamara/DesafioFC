@@ -1,6 +1,6 @@
 .info {
-  margin-top: 2vh;
-  margin-left: 128px;
+  margin-top: 1vh;
+  margin-left: 8.3vw;
 }
 
 .info h1 {
@@ -10,22 +10,21 @@
 }
 
 .info p {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   line-height: 1.4rem;
   color: 828282;
   width: 33vw;
 }
 
 form {
-  margin-left: 128px;
-  margin-top: 46px;
+  margin-left: 8.3vw;
+  margin-top: 6.3vh;
 }
 
 span h2 {
   font-size: 1.8rem;
   color: #333333;
 }
-
 form span {
   display: flex;
   align-items: center;
@@ -33,11 +32,28 @@ form span {
 }
 
 section h2 {
-  margin-bottom: 2.7vh;
+  margin-bottom: 2vh;
 }
 
-input[type="radio"] + input[type="radio"] {
-  margin-left: 1.5vw;
+h2.that {
+  margin-top: 20px;
+}
+
+label {
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+#floor,
+#seat {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 10px;
 }
 
 input[type="date"] {
@@ -45,11 +61,33 @@ input[type="date"] {
 }
 
 button[type="submit"] {
-  margin-top: 50px;
   background-color: #4f4f4f;
   width: 10vw;
   height: 4.8vh;
   border-radius: 10px;
   color: #ffffff;
   cursor: pointer;
+  bottom: 0;
+}
+
+section.station {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 50%;
+}
+
+div.station {
+  margin: auto;
+  margin-top: 20px;
+}
+
+.bla {
+  display: flex;
+}
+
+.floor-and-seat {
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }

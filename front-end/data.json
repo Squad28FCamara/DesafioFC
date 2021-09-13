@@ -3,8 +3,15 @@
   "reservations": [
     {
       "pole": "São Paulo",
+<<<<<<< HEAD
       "date": "2021-09-10",
       "estation": "EI02"
+=======
+      "date": "2021-09-01",
+      "station": "E1",
+      "seat": "02",
+      "floor": "second"
+>>>>>>> origin/frontCopy
     }
   ]
 }

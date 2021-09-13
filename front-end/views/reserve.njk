@@ -1,73 +1,96 @@
-{% extends "layout.njk"%} 
-
-{% block content %}
+{% extends "layout.njk"%} {% block content %}
 
 <head>
-    <title>Reservas</title>
+  <title>Reservas</title>
 </head>
 
 <body>
-    <link rel="stylesheet" href="reserve.css">
-    <link rel="stylesheet" href="popupS.css">
+  <link rel="stylesheet" href="reserve.css" />
 
-        <div class="info">
-            <h1>Reserve uma estação de trabalho</h1>
-            <p> Pensando em sua segurança, os escritórios da FCamara contam com apenas 40% de sua ocupação total.</p>
+  <div class="info">
+    <h1>Reserve uma estação de trabalho</h1>
+    <p>
+      Pensando em sua segurança, os escritórios da FCamara contam com apenas 40%
+      de sua ocupação total.
+    </p>
+  </div>
+
+  <form method="POST" action="/reserve">
+    <section class="pole-and-date">
+      <h2>Selecione o polo de negócio e data desejada</h2>
+      <span>
+        <input type="radio" name="pole" value="São Paulo" onclick="able()" checked />
+        <label for="">São Paulo</label>
+        <input
+          type="radio"
+          name="pole"
+          value="Santos"
+          onclick="disable()"
+        /> <label for="">Santos</label>
+        <input type="date" name="date" />
+      </span>
+    </section>
+
+<h2 class="that">Escolha a estação e lugar desejado: </h2>
+
+    <div class="bla">
+
+        <section class="station">
+        <div class="station">
+            <span><input type="radio" name="station" value="E1" id="E1" checked><label for="E1">Estação 01</label></span>
+            <img src="estation.png" alt="">
         </div>
 
-        <form method="POST" action="/reserve">
+        <div class="station">
+            <span> <input type="radio" name="station" value="E2" id="E2"><label for="E2">Estação 02</label></span>
+            <img src="estation.png" alt="" >
+        </div>
 
-            <section class="pole-and-date">
-                <h2>Selecione o polo de negócio e data desejada</h2>
-                    <span>    
-                        <input type="radio" name="pole" value="São Paulo" onclick="able()"> São Paulo
-                        <input type="radio" name="pole" value="Santos" onclick="disable()">Santos
-                        <input type="date" name="date">
-                    </span>
-{#                     
-                    <span>
-                        <input type="date" name="date">
-                    </span>  #}
-{# 
-                    <select name="floor" id="floor">
-                            <option value="primeiroAndar">1° Andar</option>
-                            <option value="segundoAndar" >2° Andar</option>
-                    </select> 
+         <div class="station">
+            <span><input type="radio" name="station"  value="E3" id="E3"><label for="E3">Estação 03</label></span>
+            <img src="estation.png" alt="">
+        </div>
 
-                    <div class="estation">
-                        <img src="estation.png" alt="" srcset="">
-                        <select name="estação">
-                            <option value="01">01</option>
-                            <option value="02">02</option>
-                            <option value="03">03</option>
-                            <option value="04">04</option>
-                            <option value="05">05</option>
-                            <option value="06">06</option>
-                        </select>
-                    </div> #}
-                
-            </section>
+         <div class="station">
+            <span><input type="radio" name="station" value="E4" id="E4"><label for="E4">Estação 04</label></span>
+            <img src="estation.png" alt="">
+        </div>
+    </section>
 
-        <button type="submit">Próximo</button>
+    <section class="floor-and-seat">
+        <select name="seat" id="seat">
+          <option value="">Escolha o seu lugar</option>
+        <option value="01">01</option>
+        <option value="02">02</option>
+        <option value="03">03</option>
+        <option value="04">04</option>
+    </select>
 
-    </form>
+    <select name="floor" id="floor">
+        <option value="">Escolha o Andar</option>
+        <option value="first">1° Andar</option>
+        <option value="second">2° Andar</option>
+    </select>
+    </section>
 
-    <script>
+    </div>
+    <button type="submit">Próximo</button>
 
-        let floor = document.getElementById('floor')
+  </form>
 
-        function disable(){
-        floor.setAttribute("disabled", "true")
-        floor.style.visibility = "hidden"
-        }
+  <script>
+    let floor = document.getElementById("floor");
 
-        function able() {
-        floor.disabled = false
-        floor.style.visibility = "visible"
-        }
+    function disable() {
+      floor.setAttribute("disabled", "true");
+      floor.options.selected = "first52"
+    }
 
-    </script>
-
-</body> 
+    function able() {
+      floor.disabled = false;
+      floor.style.visibility = "visible";
+    }
+  </script>
+</body>
 
 {% endblock %}
