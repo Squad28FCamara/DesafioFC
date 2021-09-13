@@ -1,4 +1,4 @@
-{% extends 'layout.njk' %} 
+{% extends 'layout.njk' %}
 
 {% block content %}
 
@@ -6,7 +6,7 @@
   <title>Dashboard</title>
 </head>
 
-<body>  
+<body>
 
 <link rel="stylesheet" href="dashMain.css" />
 
@@ -28,29 +28,68 @@
 
 <section class="reservations">
 
-  <div class="pole">
+  <div class="pole" id="pole">
     <h5>Polo</h5>
-    {% for reservation in data.reservations %}
-     <div> {{reservation.pole}}</div>
-    {% endfor %}
   </div>
 
-  <div class="date">
+  <div class="date" id="date">
     <h5>Agendado para</h5>
-    {% for reservation in data.reservations %}
-    <div>{{reservation.date}}</div>
-    {% endfor %}
   </div>
 
-  <div class="estation">
+  <div class="estation" id="estation">
     <h5>Estação</h5>
-    {% for reservation in data.reservations %}
-    <div>{{reservation.station}}</div>
-    {% endfor %}
   </div>
 
 
 </section>
+<script>
+  const token = localStorage.getItem('token')
+  if(!token) {
+    window.location.replace('http://localhost:3000/login')
+  }
+
+  const poleElement = document.getElementById('pole')
+  const dateElement = document.getElementById('date')
+  const estationElement = document.getElementById('estation')
+
+  async function findAppointments() {
+    const result = await fetch('http://localhost:3333/appointments/user', {
+      method: 'GET',
+      headers: {
+        "Accept": "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+        'Authorization': 'Bearer ' + token
+      },
+    })
+
+    if (result.status !== 200) {
+      window.location.replace('http://localhost:3000/login')
+    }
+
+    const data = await result.json()
+
+    data.forEach((appointment) => {
+      const poleDiv = document.createElement('div')
+      const poleText = document.createTextNode(appointment.pole)
+      poleDiv.appendChild(poleText)
+
+      const dateDiv = document.createElement('div')
+      const dateText = document.createTextNode(appointment.date.split('T')[0])
+      dateDiv.appendChild(dateText)
+
+      const estationDiv = document.createElement('div')
+      const estationText = document.createTextNode(appointment.station)
+      estationDiv.appendChild(estationText)
+
+      poleElement.appendChild(poleDiv)
+      dateElement.appendChild(dateDiv)
+      estationElement.appendChild(estationDiv)
+    })
+  }
+
+  findAppointments();
+
+</script>
 
 </body>
 

@@ -1,6 +1,5 @@
 const express = require('express');
 const { readFileSync } = require('fs');
-const axios = require('axios');
 
 const listUserAppointments = require('./services/listUserAppointment');
 const create = require('./user.reservation.js');
@@ -10,10 +9,7 @@ const router = express.Router();
 
 const data = JSON.parse(readFileSync('data.json').toString());
 
-router.get('/', async (req, res) => {
-  const reservations = await listUserAppointments();
-  return res.render('dashboard', { data: { reservations } });
-});
+router.get('/', async (req, res) => res.render('dashboard'));
 
 router.get('/login', (req, res) => res.render('login', { data }));
 
