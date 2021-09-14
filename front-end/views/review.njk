@@ -2,28 +2,10 @@
 
 {%block content%}
 
-<style>
-    .confirmation{
-    margin-left:128px;
-    margin-top: 46px;
-    
-    }
-
-    .confirmation p{
-    font-size:12px;
-    color: #828282;
-    margin-bottom:50px;
-    }
-
-    .reservations{
-    font-size: 14px;
-    text-align:center;
-    width:480px;
-    display:flex;
-    justify-content:space-between
-    }
-
-</style>
+<link rel="stylesheet" href="review.css">
+<link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"/>
 
 <body>
   <div class="confirmation">
@@ -34,21 +16,41 @@
 
   <div class="pole">
     <h5>Polo</h5>
-     <div> {{data.reservations[data.reservations.length -1].pole}}  
+     <div>{{reservation.pole}}  
      </div>    
   </div>
 
+
   <div class="date">
     <h5>Agendado para</h5>
-    <div>{{data.reservations[data.reservations.length -1].date}}</div> 
+    <div>{{reservation.date}}</div> 
   </div>
 
   <div class="estation">
     <h5>Estação</h5>
-    <div>{{data.reservations[data.reservations.length -1].station}} {{data.reservations[data.reservations.length -1].seat}}</div> 
+    <div>{{reservation.station}}{{reservation.seat}}</div> 
   </div>
 
+  <form action="/confirmation" method="post">
+    <button type="submit" class="confirm">Confirmar</button>
+  </form>
   </div>
+
+  <div class="modal-overlay">
+    <div class="modal">
+      <a class="close-modal">
+          <i class="material-icons">close</i>
+        </a>
+      <div class="modal-content">
+        <h1> Reserva confirmada! </h1>
+        <img src="confirmation.png" alt="">
+        <p>Você acaba de confirmar a sua reserva. Para conferir maiores informações, acesse "Minhas Reservas".</p>
+      </div>
+    </div>
+  </div>
+
+<script src="modal.js"></script>
+
 </body>
 
 {%endblock%}

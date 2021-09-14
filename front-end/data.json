@@ -3,65 +3,74 @@
   "reservations": [
     {
       "pole": "São Paulo",
-      "date": "2021-09-01",
+      "date": "2021-09-10",
       "station": "E1",
       "seat": "02",
-      "floor": "second"
+      "floor": "F1"
     },
     {
       "pole": "São Paulo",
-      "date": "2021-09-09",
+      "date": "2021-09-10",
       "station": "E1",
-      "seat": "04",
-      "floor": "second"
-    },
-    {
-      "pole": "Santos",
-      "date": "2021-09-22",
-      "station": "E2",
-      "seat": "06"
+      "seat": "02",
+      "floor": "F1"
     },
     {
       "pole": "São Paulo",
-      "date": "2021-09-27",
-      "station": "E2",
+      "date": "2021-09-10",
+      "station": "E1",
+      "seat": "02",
+      "floor": "F1"
+    },
+    null,
+    {
+      "pole": "São Paulo",
+      "date": "2021-09-02",
+      "station": "E1",
+      "seat": "02",
+      "floor": "F1"
+    },
+    {
+      "pole": "São Paulo",
+      "date": "2021-09-23",
+      "station": "E1",
+      "seat": "01",
+      "floor": "F1"
+    },
+    {
+      "pole": "São Paulo",
+      "date": "2021-09-08",
+      "station": "E1",
       "seat": "03",
-      "floor": "second"
+      "floor": "F1"
     },
     {
       "pole": "São Paulo",
-      "date": "2021-09-27",
-      "station": "E2",
-      "seat": "",
-      "floor": "second"
-    },
-    {
-      "pole": "São Paulo",
-      "date": "2021-09-22",
+      "date": "2021-09-17",
       "station": "E1",
-      "seat": "",
-      "floor": ""
-    },
-    {
-      "pole": "São Paulo",
-      "date": "2021-09-16",
-      "station": "E1",
-      "seat": "05",
-      "floor": ""
-    },
-    {
-      "pole": "São Paulo",
-      "date": "2021-09-09",
-      "station": "E2",
-      "seat": "05",
-      "floor": "second"
+      "seat": "03",
+      "floor": "F1"
     },
     {
       "pole": "São Paulo",
       "date": "2021-09-29",
-      "station": "E2",
-      "seat": "04",
-      "floor": "second"
+      "station": "E1",
+      "seat": "02",
+      "floor": "F2"
+    },
+    {
+      "pole": "São Paulo",
+      "date": "2021-09-09",
+      "station": "E1",
+      "seat": "02",
+      "floor": "F1"
+    },
+    {
+      "pole": "São Paulo",
+      "date": "2021-09-09",
+      "station": "E1",
+      "seat": "02",
+      "floor": "F1"
     }
   ]
 }

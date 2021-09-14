@@ -1,40 +1,48 @@
 .card {
-  background-color: #f8f8f8;
-  width: 28vw;
-  height: 31vh;
-  border-radius: 40px;
-  margin-top: 7vh;
-  margin-left: 14.5vw;
-  box-sizing: border-box;
+  min-width: 279px;
+  min-height: 228px;
+  width: 28.5vw;
+  height: 36.7vh;
+  background-color: var(--color-cinza5);
+  border-radius: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 38px;
+  margin-left: 288px;
+  box-shadow: -9px 10px 6px 1px rgba(0, 0, 0, 0.2);
 }
 
-.card .card-info {
-  height: 11.8vh;
-  width: 13.2vw;
-  margin-top: 4.9vw;
-  margin: auto;
+.card .card-title h2 {
+  color: var(--color-cinza1);
+  line-height: 22px;
+  margin-bottom: 21px;
+  min-width: 108px;
+  width: 14vw;
 }
 
-.card .card-info h1 {
-  font-size: 1.8rem;
-  color: #333333;
-  margin-bottom: 4px;
+.card .card-title {
+  color: var(--color-cinza3);
+  margin-left: 35px;
+  min-width: 166px;
+  width: 16.3vw;
+  font-size: 1.4rem;
 }
 
-.card .card-info p {
-  font-size: 1.2rem;
-  line-height: 1.4rem;
-  color: #866a6a;
+.card img {
+  min-width: 92px;
+  min-height: 150px;
+  width: 7.7vw;
+  height: 28.6vh;
 }
 
-.card .card-info button {
-  background-color: #4f4f4f;
-  width: 160px;
-  padding: 9px 41px;
-  font-weight: 700;
-  color: #ffffff;
-  border-radius: 10px;
-  margin-top: 24px;
+.card button {
+  margin-top: 29px;
+  width: 168.29px;
+  height: 31.28px;
+  border-radius: 13px;
+  background-color: #fe4400;
+  color: var(--color-branco);
 }
 
 .reservations-info {
@@ -43,15 +51,14 @@
 }
 
 .reservations-info h1 {
-  font-size: 2.4rem;
   line-height: 2.9rem;
-  color: #333333;
+  color: var(--color-cinza1);
 }
 
 .reservations-info p {
   font-size: 1.4rem;
   line-height: 1.7rem;
-  color: #828282;
+  color: var(--color-cinza3);
 }
 
 .reservations {
@@ -64,6 +71,7 @@
   width: 40.2vw;
   margin: auto;
   margin-top: 28px;
+  min-width: 390px;
 }
 
 .reservations h5 {

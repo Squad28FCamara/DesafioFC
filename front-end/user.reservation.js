@@ -2,22 +2,33 @@ const { readFileSync, writeFileSync } = require('fs');
 
 const data = JSON.parse(readFileSync('data.json').toString());
 
-function create(req, res) {
-  const reservation = req.body;
+let reservation = null;
+
+async function create(req, res) {
+  reservation = req.body;
 
   if (
     !reservation.pole ||
-    !reservation.seat ||
-    !reservation.station ||
     !reservation.date ||
-    !reservation.floor
+    !reservation.station ||
+    !reservation.seat
   ) {
     console.log('Nop');
   } else {
-    data.reservations.push(reservation);
-    writeFileSync('data.json', JSON.stringify(data, null, 2));
-    return res.send(data);
+    res.redirect('/review');
   }
 }
 
-module.exports = create;
+function confirm(req, res) {
+  data.reservations.push(reservation);
+
+  writeFileSync('data.json', JSON.stringify(data, null, 2));
+
+  console.log('Foi');
+}
+
+module.exports = {
+  create,
+  reservation,
+  confirm,
+};
