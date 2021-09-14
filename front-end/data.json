@@ -3,15 +3,65 @@
   "reservations": [
     {
       "pole": "São Paulo",
-<<<<<<< HEAD
-      "date": "2021-09-10",
-      "estation": "EI02"
-=======
       "date": "2021-09-01",
       "station": "E1",
       "seat": "02",
       "floor": "second"
->>>>>>> origin/frontCopy
+    },
+    {
+      "pole": "São Paulo",
+      "date": "2021-09-09",
+      "station": "E1",
+      "seat": "04",
+      "floor": "second"
+    },
+    {
+      "pole": "Santos",
+      "date": "2021-09-22",
+      "station": "E2",
+      "seat": "06"
+    },
+    {
+      "pole": "São Paulo",
+      "date": "2021-09-27",
+      "station": "E2",
+      "seat": "03",
+      "floor": "second"
+    },
+    {
+      "pole": "São Paulo",
+      "date": "2021-09-27",
+      "station": "E2",
+      "seat": "",
+      "floor": "second"
+    },
+    {
+      "pole": "São Paulo",
+      "date": "2021-09-22",
+      "station": "E1",
+      "seat": "",
+      "floor": ""
+    },
+    {
+      "pole": "São Paulo",
+      "date": "2021-09-16",
+      "station": "E1",
+      "seat": "05",
+      "floor": ""
+    },
+    {
+      "pole": "São Paulo",
+      "date": "2021-09-09",
+      "station": "E2",
+      "seat": "05",
+      "floor": "second"
+    },
+    {
+      "pole": "São Paulo",
+      "date": "2021-09-29",
+      "station": "E2",
+      "seat": "04",
+      "floor": "second"
     }
   ]
 }
