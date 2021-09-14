@@ -10,10 +10,10 @@ export async function create(req, res) {
   reservation = req.body;
 
   if (
-    reservation.pole == "" ||
-    reservation.date == "" ||
-    reservation.station == "" ||
-    reservation.seat == ""
+    !reservation.pole ||
+    !reservation.date ||
+    !reservation.station ||
+    !reservation.seat
   ) {
     console.log("Nop");
   } else {

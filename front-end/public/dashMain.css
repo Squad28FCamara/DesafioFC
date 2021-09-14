@@ -10,7 +10,7 @@
   align-items: center;
   margin-top: 38px;
   margin-left: 288px;
-  box-shadow: -9px 10px 0 1px black;
+  box-shadow: -9px 10px 6px 1px rgba(0, 0, 0, 0.2);
 }
 
 .card .card-title h2 {
