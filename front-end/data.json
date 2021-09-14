@@ -3,10 +3,18 @@
   "reservations": [
     {
       "pole": "São Paulo",
-      "date": "2021-09-01",
+      "date": "2021-09-10",
       "station": "E1",
       "seat": "02",
-      "floor": "second"
+      "floor": "F1"
+    },
+
+    {
+      "pole": "São Paulo",
+      "date": "2021-09-10",
+      "station": "E1",
+      "seat": "02",
+      "floor": "F1"
     }
   ]
 }

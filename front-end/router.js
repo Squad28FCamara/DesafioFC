@@ -1,5 +1,5 @@
 import express from "express";
-import { create } from "./user.reservation.js";
+import { create, reservation, confirm } from "./user.reservation.js";
 
 import { promises as fs } from "fs";
 const { readFile, writeFile } = fs;
@@ -20,7 +20,9 @@ router.get("/reserve", (req, res) => res.render("reserve", { data }));
 
 router.post("/reserve", create);
 
-router.get("/review", (req, res) => res.render("review", { data }));
+router.post("/confirmation", confirm);
+
+router.get("/review", (req, res) => res.render("review", { reservation }));
 
 router.get("/covid", (req, res) => res.render("covid", { data }));
 

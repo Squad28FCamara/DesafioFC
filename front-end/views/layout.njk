@@ -1,11 +1,8 @@
 <!DOCTYPE html>
   
 </body>
-</html>
 
 {%block layout%}
-
-
 
 <div class="container">
 
@@ -28,11 +25,12 @@
 
 <script>
 
-  const menu = document.getElementById('dash ')
+  const menu = document.getElementById("dash")
 
-  if(window.location.href == "http://localhost:3000/"){
-      menu.classList.add('active')
-  }
+  menu.addEventListener("click", () => {
+  menu.classList.add('active')
+  alert("foi")
+  })
 </script>
 
 <main>

@@ -4,8 +4,10 @@ const { readFile, writeFile } = fs;
 
 const data = JSON.parse(await readFile("data.json"));
 
-export function create(req, res) {
-  const reservation = req.body;
+let reservation = null;
+
+export async function create(req, res) {
+  reservation = req.body;
 
   if (
     reservation.pole == "" ||
@@ -15,12 +17,16 @@ export function create(req, res) {
   ) {
     console.log("Nop");
   } else {
-    data.reservations.push(reservation);
-
-    return res.redirect("/review");
+    res.redirect("/review");
   }
 }
 
-export function confirm() {
-  WriteFileSync("data.json", JSON.stringify(data, null, 2));
+export { reservation };
+
+export async function confirm(req, res) {
+  data.reservations.push(reservation);
+
+  await writeFile("data.json", JSON.stringify(data, null, 2));
+
+  console.log("Foi");
 }

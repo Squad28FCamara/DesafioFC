@@ -1,4 +1,6 @@
-{% extends "layout.njk"%} {% block content %}
+{% extends "layout.njk"%}
+
+{% block content %}
 
 <head>
   <title>Reservas</title>
@@ -17,7 +19,7 @@
 
   <form method="POST" action="/reserve">
     <section class="pole-and-date">
-      <h2>Selecione o polo de negócio e data desejada</h2>
+      <h1>Selecione o polo de negócio e data desejada</h1>
       <span>
         <input type="radio" name="pole" value="São Paulo" onclick="able()" checked />
         <label for="">São Paulo</label>
@@ -38,22 +40,22 @@
         <section class="station">
         <div class="station">
             <span><input type="radio" name="station" value="E1" id="E1" checked><label for="E1">Estação 01</label></span>
-            <img src="estation.png" alt="">
+            <img src="station.png" alt="">
         </div>
 
         <div class="station">
             <span> <input type="radio" name="station" value="E2" id="E2"><label for="E2">Estação 02</label></span>
-            <img src="estation.png" alt="" >
+            <img src="station2.png" alt="" >
         </div>
 
          <div class="station">
             <span><input type="radio" name="station"  value="E3" id="E3"><label for="E3">Estação 03</label></span>
-            <img src="estation.png" alt="">
+            <img src="station3.png" alt="">
         </div>
 
          <div class="station">
             <span><input type="radio" name="station" value="E4" id="E4"><label for="E4">Estação 04</label></span>
-            <img src="estation.png" alt="">
+            <img src="station.png" alt="">
         </div>
     </section>
 
@@ -68,8 +70,8 @@
 
     <select name="floor" id="floor">
         <option value="">Escolha o Andar</option>
-        <option value="first">1° Andar</option>
-        <option value="second">2° Andar</option>
+        <option value="F1">1° Andar</option>
+        <option value="F2">2° Andar</option>
     </select>
     </section>
 

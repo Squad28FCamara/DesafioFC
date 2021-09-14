@@ -9,6 +9,12 @@
 
 :root {
   font-size: 62.5%;
+  --color-cinza1: #333333;
+  --color-cinza2: #4f4f4f;
+  --color-cinza3: #828282;
+  --color-cinza4: #e0e0e0;
+  --color-cinza5: #f8f8f8;
+  --color-branco: #ffffff;
 }
 
 .container {
@@ -93,6 +99,10 @@
 
 .container main {
   grid-area: main;
+}
+
+.active {
+  background-color: red;
 }
 
 @media only screen and (max-width: 900px) {
