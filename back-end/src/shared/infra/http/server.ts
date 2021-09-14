@@ -4,8 +4,16 @@ import cors from 'cors';
 import express from 'express';
 import routes from './routes';
 
-import '@shared/infra/typeorm/';
+import connection from '@shared/infra/typeorm/';
 import error from '@shared/infra/http/errors/error';
+import asyncSeed from '@modules/users/infra/services/seedUser';
+
+async function databaseSetup() {
+  await connection();
+  asyncSeed();
+}
+
+databaseSetup();
 
 const app = express();
 

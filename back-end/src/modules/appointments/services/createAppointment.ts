@@ -35,7 +35,7 @@ class createAppointment {
       }
     });
 
-    if (pole === 'SãoPaulo') {
+    if (pole === 'São Paulo') {
       if (samePole.length === 240) {
         throw new AppError('This pole is already full');
       }

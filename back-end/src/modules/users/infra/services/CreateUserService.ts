@@ -11,7 +11,6 @@ interface IRequest {
   password: string;
 }
 
-//serviço para criar usuario
 class CreateUserService {
   async execute({ name, email, password }: IRequest): Promise<User> {
     const usersRepository = getRepository(User);
