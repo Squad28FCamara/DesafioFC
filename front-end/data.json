@@ -2,75 +2,20 @@
   "name": "Samuel Menecucci",
   "reservations": [
     {
-      "pole": "São Paulo",
-      "date": "2021-09-10",
-      "station": "E1",
-      "seat": "02",
-      "floor": "F1"
-    },
-    {
-      "pole": "São Paulo",
-      "date": "2021-09-10",
-      "station": "E1",
-      "seat": "02",
-      "floor": "F1"
-    },
-    {
-      "pole": "São Paulo",
-      "date": "2021-09-10",
-      "station": "E1",
-      "seat": "02",
-      "floor": "F1"
-    },
-    null,
-    {
-      "pole": "São Paulo",
-      "date": "2021-09-02",
-      "station": "E1",
-      "seat": "02",
-      "floor": "F1"
-    },
-    {
+      "id": 1,
       "pole": "São Paulo",
       "date": "2021-09-23",
-      "station": "E1",
-      "seat": "01",
-      "floor": "F1"
+      "station": "E3",
+      "seat": "C3",
+      "floor": "A2"
     },
     {
+      "id": 2,
       "pole": "São Paulo",
-      "date": "2021-09-08",
-      "station": "E1",
-      "seat": "03",
-      "floor": "F1"
-    },
-    {
-      "pole": "São Paulo",
-      "date": "2021-09-17",
-      "station": "E1",
-      "seat": "03",
-      "floor": "F1"
-    },
-    {
-      "pole": "São Paulo",
-      "date": "2021-09-29",
-      "station": "E1",
-      "seat": "02",
-      "floor": "F2"
-    },
-    {
-      "pole": "São Paulo",
-      "date": "2021-09-09",
-      "station": "E1",
-      "seat": "02",
-      "floor": "F1"
-    },
-    {
-      "pole": "São Paulo",
-      "date": "2021-09-09",
-      "station": "E1",
-      "seat": "02",
-      "floor": "F1"
+      "date": "2021-09-23",
+      "station": "E3",
+      "seat": "C3",
+      "floor": "A2"
     }
   ]
 }

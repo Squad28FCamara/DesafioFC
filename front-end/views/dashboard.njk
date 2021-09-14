@@ -1,54 +1,63 @@
-{% extends 'layout.njk' %} 
-
-{% block content %}
+{% extends 'layout.njk' %} {% block content %}
 
 <head>
   <title>Dashboard</title>
 </head>
 
-<body>  
+<body>
+  <link rel="stylesheet" href="dashMain.css" />
 
-<link rel="stylesheet" href="dashMain.css" />
-
-<section class="card">
-  <div class="card-title">
-    <h2>Informações sobre COVID-19</h2>
-    <div class="card-content">Conheça os protocolos de segurança adotados para um retorno presencial seguro</div>
-    <button>Saiba Mais</button>
+  <section class="card">
+    <div class="card-title">
+      <h2>Informações sobre COVID-19</h2>
+      <div class="card-content">
+        Conheça os protocolos de segurança adotados para um retorno presencial
+        seguro
+      </div>
+      <button>Saiba Mais</button>
     </div>
-    <img src="cardImage.png" alt="">
-</section>
+    <img src="cardImage.png" alt="" />
+  </section>
 
-<div class="reservations-info">
-  <h1>Reservas Resentes</h1>
-  <p>Confira e gerencie as suas últimas reservas</p>
-</div>
-
-<section class="reservations">
-
-  <div class="pole">
-    <h3>Polo</h3>
-    {% for reservation in data.reservations %}
-     <div> {{reservation.pole}}</div>
-    {% endfor %}
+  <div class="reservations-info">
+    <h1>Reservas recentes</h1>
+    <p>Confira e gerencie as suas últimas reservas</p>
   </div>
 
-  <div class="date">
-    <h3>Agendado para</h5>
-    {% for reservation in data.reservations %}
-    <div>{{reservation.date}}</div> 
-    {% endfor %}
-  </div>
+  <section class="reservations">
+    <table cellspacing="0">
+      <thead>
+        <tr>
+          <th>Polo</th>
+          <th>Agendado Para</th>
+          <th>Estação*</th>
+          <th>Cancelar reserva</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for reservation in data.reservations %}
+        <tr>
+          <td id="left">{{ reservation.pole }}</td>
+          <td>{{ reservation.date }}</td>
+          <td>
+            {{ reservation.station }}{{ reservation.seat
+            }}{{ reservation.floor }}
+          </td>
+          <td id="rigth" onclick="excluir({{reservation.id}})"> x </td>
+        </tr>
+        {%endfor%}
+      </tbody>
+    </table>
+  </section>
 
-  <div class="estation">
-    <h3>Estação</h3>
-    {% for reservation in data.reservations %}
-    <div>{{reservation.station}}{{reservation.seat}}{{reservation.floor}}</div> 
-    {% endfor %}
-  </div>
+  <script>
 
-</section>
-
+     function excluir(id){
+      alert(id)
+      //excluir o usuário com o filtro passado
+     }
+    
+     </script>
 </body>
 
 {% endblock %}

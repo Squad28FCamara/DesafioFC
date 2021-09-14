@@ -1,4 +1,4 @@
-const test = document.querySelector(".confirmation");
+const test = document.querySelector(".confirm");
 const modalOverlay = document.querySelector(".modal-overlay");
 
 test.addEventListener("click", () => {
