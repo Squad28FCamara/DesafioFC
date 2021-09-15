@@ -6,7 +6,7 @@
       "pole": "São Paulo",
       "date": "2021-09-23",
       "station": "E3",
-      "seat": "C3",
+      "seat": "C1",
       "floor": "A2"
     },
     {
@@ -44,6 +44,13 @@
       "station": "E1",
       "seat": "C3",
       "floor": "A2"
+    },
+    {
+      "pole": "São Paulo",
+      "date": "2021-09-24",
+      "station": "E2",
+      "seat": "C4",
+      "floor": "A1"
     }
   ]
 }

@@ -43,6 +43,7 @@
   border-radius: 13px;
   background-color: #fe4400;
   color: var(--color-branco);
+  cursor: pointer;
 }
 
 .reservations-info {
@@ -108,6 +109,10 @@ td {
 
 #rigth {
   border-radius: 0 40px 40px 0;
+}
+
+#delete {
+  cursor: pointer;
 }
 
 .reservations h5 {

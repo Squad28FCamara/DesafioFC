@@ -43,7 +43,7 @@
             {{ reservation.station }}{{ reservation.seat
             }}{{ reservation.floor }}
           </td>
-          <td id="rigth" onclick="excluir({{reservation.id}})"> x </td>
+          <td id="rigth" onclick="excluir({{reservation.id}})"> <img src="delete.png" id="delete" alt="deleteReservation"> </td>
         </tr>
         {%endfor%}
       </tbody>

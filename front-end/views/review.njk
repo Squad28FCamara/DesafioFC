@@ -3,38 +3,43 @@
 {%block content%}
 
 <link rel="stylesheet" href="review.css">
+
 <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"/>
 
 <body>
-  <div class="confirmation">
+  <div class="confirmation-info">
     <h1>Confirmação</h1>
     <p>Confira os dados de sua reserva</p>
-
+  </div>
     <section class="reservations">
 
-  <div class="pole">
-    <h5>Polo</h5>
-     <div>{{reservation.pole}}  
-     </div>    
-  </div>
-
-
-  <div class="date">
-    <h5>Agendado para</h5>
-    <div>{{reservation.date}}</div> 
-  </div>
-
-  <div class="estation">
-    <h5>Estação</h5>
-    <div>{{reservation.station}}{{reservation.seat}}{{Reservat}}</div> 
-  </div>
+  <table cellspacing="0">
+      <thead>
+        <tr>
+          <th>Polo</th>
+          <th>Agendado Para</th>
+          <th>Estação</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td id="left">{{ reservation.pole }}</td>
+          <td>{{ reservation.date }}</td>
+          <td>
+            {{ reservation.station }}{{ reservation.seat
+            }}{{ reservation.floor }}
+          </td>
+          
+        </tr>
+      </tbody>
+    </table>
 
   <form action="/confirmation" method="post">
-    <button type="submit" class="confirm">Confirmar</button>
+    <a href="/reserve">Voltar</a> <button type="submit" class="confirm">Confirmar</button>
   </form>
-  </div>
+  
 
   <div class="modal-overlay">
     <div class="modal">

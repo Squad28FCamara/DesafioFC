@@ -21,40 +21,42 @@
     <section class="pole-and-date">
       <h1>Selecione o polo de negócio e data desejada</h1>
       <span>
-        <input type="radio" name="pole" value="São Paulo" onclick="able()" checked />
-        <label for="">São Paulo</label>
+        <input type="radio" name="pole" value="São Paulo" onclick="able()" checked id="sp" />
+        <label for="sp">São Paulo</label>
         <input
           type="radio"
           name="pole"
           value="Santos"
           onclick="disable()"
-        /> <label for="">Santos</label> 
+          id="sts"
+        /> <label for="sts">Santos</label> 
         <input type="date" name="date" />
       </span>
     </section>
 
-<h2 class="that">Escolha a estação e lugar desejado: </h2>
+<h2 class="titleStation">Escolha a estação e lugar desejado: </h2>
 
-    <div class="bla">
+    <div class="station-container">
 
-        <section class="station">
+        <section class="stations">
+          
         <div class="station">
-            <span><input type="radio" name="station" value="E1" id="E1" checked><label for="E1">Estação 01</label></span>
+            <span><input type="radio" name="station" value="E1" id="E1" checked><label for="E1">Sala de Reunião 1</label></span>
             <img src="station.png" alt="">
         </div>
 
         <div class="station">
-            <span> <input type="radio" name="station" value="E2" id="E2"><label for="E2">Estação 02</label></span>
+            <span> <input type="radio" name="station" value="E2" id="E2" onclick="verifySeats()"><label for="E2">Sala de Reunião 2</label></span>
             <img src="station2.png" alt="" >
         </div>
 
          <div class="station">
-            <span><input type="radio" name="station"  value="E3" id="E3"><label for="E3">Estação 03</label></span>
+            <span><input type="radio" name="station"  value="E3" id="E3"><label for="E3">Sala de Reunião 3</label></span>
             <img src="station3.png" alt="">
         </div>
 
          <div class="station">
-            <span><input type="radio" name="station" value="E4" id="E4"><label for="E4">Estação 04</label></span>
+            <span><input type="radio" name="station" value="E4" id="E4"><label for="E4">Sala de Reunião 4</label></span>
             <img src="station.png" alt="">
         </div>
     </section>
@@ -62,44 +64,26 @@
     <section class="floor-and-seat">
         <select name="seat" id="seat">
           <option value="">Escolha o seu lugar</option>
-        <option value="C1" id="oi">01</option>
-        <option value="C2">02</option>
-        <option value="C3">03</option>
-        <option value="C4">04</option>
-        <option value="C5">05</option>
-        <option value="C6">06</option>
+          <option value="C1" id="C1" >01</option>
+          <option value="C2">02</option>
+          <option value="C3">03</option>
+          <option value="C4">04</option>
+          <option value="C5">05</option>
+          <option value="C6">06</option>
     </select>
 
     <select name="floor" id="floor">
-        <option value="">Escolha o Andar</option>
+        <option value="">Escolha o andar</option>
         <option value="A1" id="a1" >1° Andar</option>
         <option value="A2">2° Andar</option>
     </select>
     </section>
 
     </div>
-    <button type="submit" onclick="verificar()">Próximo</button>
-    
+    <button type="submit">Próximo</button>
   </form>
 
-  <script>
-    let floor = document.getElementById("floor");
-
-    function disable() {
-      floor.setAttribute("disabled", "true");
-      floor.value = "A1"
-    }
-
-    function able() {
-      floor.disabled = false;
-      floor.style.visibility = "visible";
-    }
-
-    function verificar(){
-    
-    }
-
-  </script>
+  <script src="scripts.js"></script>
 </body>
 
 {% endblock %}
