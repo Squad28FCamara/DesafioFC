@@ -72,8 +72,8 @@ form a {
 .modal {
   background-color: #f8f8f8;
   border-radius: 40px;
-  width: 537px;
-  height: 249px;
+  width: 392px;
+  height: 392px;
   margin: 30vh auto;
   position: relative;
 }
@@ -87,12 +87,21 @@ form a {
 }
 
 .modal-content {
-  height: 95%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+.modal-content h1 {
+  color: #fe4400;
+}
+
+.modal-content p {
+  width: 288px;
+  color: var(--color-cinza2);
 }
 
 .modal-content img {
