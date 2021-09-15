@@ -51,6 +51,14 @@
       "station": "E2",
       "seat": "C4",
       "floor": "A1"
+    },
+    null,
+    {
+      "pole": "São Paulo",
+      "date": "2021-09-24",
+      "station": "E2",
+      "seat": "C3",
+      "floor": "A2"
     }
   ]
 }

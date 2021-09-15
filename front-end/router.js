@@ -24,7 +24,7 @@ router.get("/", (req, res) => {
 router.get("/reserve", (req, res) => {
   location = "Reservar";
 
-  res.render("reserve", { data, location });
+  res.render("reserves/reserve", { data, location });
 });
 
 router.post("/reserve", create);
@@ -34,7 +34,7 @@ router.post("/confirmation", confirm);
 router.get("/review", (req, res) => {
   location = "Reservar";
 
-  res.render("review", { reservation, location });
+  res.render("reserves/review", { reservation, location });
 });
 
 router.get("/covid", (req, res) => {
