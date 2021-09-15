@@ -1,10 +1,10 @@
 const express = require('express');
 const { readFileSync } = require('fs');
-const create = require('./user.reservation.js');
+const { create, confirm } = require('./user.reservation.js');
 
 const router = express.Router();
 
-const akeladata = JSON.parse(readFileSync('data.json').toString());
+const data = JSON.parse(readFileSync('data.json').toString());
 
 router.get('/', async (req, res) => res.render('dashboard'));
 
@@ -18,6 +18,6 @@ router.post('/confirmation', confirm);
 
 router.get('/review', (req, res) => res.render('review', { reservation }));
 
-router.get('/covid', (req, res) => res.render('covid', { akeladata }));
+router.get('/covid', (req, res) => res.render('covid', { data }));
 
 module.exports = router;
