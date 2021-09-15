@@ -32,25 +32,11 @@
       "seat": "C4"
     },
     {
-      "pole": "Santos",
-      "date": "2021-09-09",
-      "station": "E1",
-      "seat": "C4"
-    },
-    {
-      "pole": "Santos",
-      "date": "2021-09-02",
-      "station": "E2",
-      "seat": "C2"
-    },
-    {
       "pole": "São Paulo",
-      "date": "2021-09-16",
-      "station": "E1",
-      "seat": "C3",
+      "date": "2021-09-15",
+      "station": "E2",
+      "seat": "C6",
       "floor": "A2"
-    },
-    null,
-    null
+    }
   ]
 }
