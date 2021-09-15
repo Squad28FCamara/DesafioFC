@@ -13,7 +13,8 @@ export async function create(req, res) {
     !reservation.pole ||
     !reservation.date ||
     !reservation.station ||
-    !reservation.seat
+    !reservation.seat ||
+    !reservation.floor
   ) {
     console.log("Nop");
   } else {

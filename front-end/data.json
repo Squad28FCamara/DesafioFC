@@ -37,6 +37,19 @@
       "station": "E2",
       "seat": "C6",
       "floor": "A2"
+    },
+    {
+      "pole": "Santos",
+      "date": "2021-09-09",
+      "station": "E3",
+      "seat": "C4"
+    },
+    {
+      "pole": "São Paulo",
+      "date": "2021-09-16",
+      "station": "E2",
+      "seat": "C1",
+      "floor": "A2"
     }
   ]
 }
