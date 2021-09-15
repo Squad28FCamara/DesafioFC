@@ -77,9 +77,15 @@
   width: 100%;
 }
 
+.menu .links span {
+  width: 38px;
+  text-align: center;
+}
+
 .menu .links {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 13.28vw;
   margin: auto;
 }
@@ -95,6 +101,21 @@
   margin-bottom: 3.56vh;
   display: flex;
   align-items: center;
+}
+
+.dash.styled {
+  color: white;
+  font-weight: 700;
+}
+
+.calendar.styled {
+  color: white;
+  font-weight: 700;
+}
+
+.covid.styled {
+  color: white;
+  font-weight: 700;
 }
 
 .container main {

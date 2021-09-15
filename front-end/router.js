@@ -10,20 +10,36 @@ const router = express.Router();
 
 const data = JSON.parse(await readFile("data.json"));
 
+let location = "";
+
 app.use(express.json());
 
 router.get("/login", (req, res) => res.render("login"));
 
-router.get("/", (req, res) => res.render("dashboard", { data }));
+router.get("/", (req, res) => {
+  location = "Dashboard";
+  res.render("dashboard", { data, location });
+});
 
-router.get("/reserve", (req, res) => res.render("reserve", { data }));
+router.get("/reserve", (req, res) => {
+  location = "Reservar";
+
+  res.render("reserve", { data, location });
+});
 
 router.post("/reserve", create);
 
 router.post("/confirmation", confirm);
 
-router.get("/review", (req, res) => res.render("review", { reservation }));
+router.get("/review", (req, res) => {
+  location = "Reservar";
 
-router.get("/covid", (req, res) => res.render("covid", { data }));
+  res.render("review", { reservation, location });
+});
+
+router.get("/covid", (req, res) => {
+  location = "COVID-19";
+  res.render("covid", { data, location });
+});
 
 export default router;

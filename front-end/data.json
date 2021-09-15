@@ -16,6 +16,34 @@
       "station": "E3",
       "seat": "C3",
       "floor": "A2"
+    },
+    {
+      "id": 3,
+      "pole": "Santos",
+      "date": "2029-05-14",
+      "station": "E2",
+      "seat": "C4"
+    },
+    {
+      "id": 4,
+      "pole": "Santos",
+      "date": "2021-09-24",
+      "station": "E1",
+      "seat": "C4"
+    },
+    {
+      "pole": "São Paulo",
+      "date": "2021-09-09",
+      "station": "E1",
+      "seat": "C3",
+      "floor": "A1"
+    },
+    {
+      "pole": "São Paulo",
+      "date": "2021-09-03",
+      "station": "E1",
+      "seat": "C3",
+      "floor": "A2"
     }
   ]
 }

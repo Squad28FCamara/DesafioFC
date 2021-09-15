@@ -72,33 +72,33 @@
 
     <select name="floor" id="floor">
         <option value="">Escolha o Andar</option>
-        <option value="A1">1° Andar</option>
+        <option value="A1" id="a1" >1° Andar</option>
         <option value="A2">2° Andar</option>
     </select>
     </section>
 
     </div>
-    <button type="submit">Próximo</button>
+    <button type="submit" onclick="verificar()">Próximo</button>
     
   </form>
 
   <script>
     let floor = document.getElementById("floor");
-    let option1 = document.getElementById("oi")
-
-    option1.addEventListener("click", () => {
-      alert("Foi")
-    })
 
     function disable() {
       floor.setAttribute("disabled", "true");
-      floor.option.selected = "first52"
+      floor.value = "A1"
     }
 
     function able() {
       floor.disabled = false;
       floor.style.visibility = "visible";
     }
+
+    function verificar(){
+    
+    }
+
   </script>
 </body>
 

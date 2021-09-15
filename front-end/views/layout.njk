@@ -7,7 +7,7 @@
 <div class="container">
 
 <header>
-    <div class="area">Dashboard</div>
+    <div class="area">{{ location }}</div>
     <div class="user">{{ data.name }} <img src="notification.png" alt="" /></div>
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,31 +16,26 @@
 <section class="menu">
     <div class="logo"><img src="fcamara-logo.png" alt=""></div>
     <div class="links">
-      <a href="/" id="dash"><img src="home.png" alt="" />Dashboard</a>
-      <a href="/reserve" id="calendar"> <img src="calendar.png" alt="" />Reservar</a>
-      <a href="/covid" id="covid"><img src="covid.png" alt="" /> COVID-19</a>
-      <a href="/"><img src="config.png" alt="" /> Configurações</a>
+      <a href="/" class="dash {{ 'styled' if location == 'Dashboard' }}">
+      <span><img src="home.png" alt="" /></span>
+      Dashboard
+      </a>
+      <a href="/reserve" class="calendar {{ 'styled' if location == 'Reservar' }}" >
+      <span> <img src="calendar.png" alt="" /></span>
+      Reservar</a>
+      <a href="/covid" class="covid {{ 'styled' if location == 'COVID-19' }}">
+      <span><img src="covid.png" alt="" /></span>
+       COVID-19</a>
+      <a href="">
+        <span><img src="config.png" alt="" /></span>
+         Configurações</a>
     </div>
 </section>
-
-
-<script>
-
-  const menu = document.getElementById("dash")
-
-  menu.addEventListener("click", () => {
-  menu.classList.add('active')
-  alert("foi")
-  })
-</script> 
-
 
 <main>
   {% block content%} {%endblock%}
 </main>
 
 </div>
-
-
 
 {%endblock%}
