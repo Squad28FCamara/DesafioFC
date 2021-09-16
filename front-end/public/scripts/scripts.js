@@ -5,6 +5,6 @@ function disable() {
 }
 
 function able() {
-  floor.disabled = false;
+  floor.style.visibility = "visible";
   floor.value = "";
 }

@@ -47,7 +47,7 @@
             {{ reservation.station }}{{ reservation.seat
             }}{{ reservation.floor }}
           </td>
-          <td id="rigth"> <img src="delete.png" id="delete" alt="deleteReservation"> </td>
+          <td id="rigth" class="delete"> <img src="delete.png"  alt="deleteReservation"> </td>
         </tr>
         {%endfor%}
       </tbody>
@@ -55,7 +55,7 @@
     <div class="legends">*[S = Sala; E = Estação; A = Andar]</div> 
   </section>
 
-  {# <div class="modal-overlay">
+  <div class="modal-overlay">
     <div class="modal">
       <div class="modal-content">
         <h1> Você tem certeza de que deseja cancelar essa reserva? </h1>
@@ -64,7 +64,7 @@
         <div class="options"> <a href="/">Voltar</a><button id="cancel" onclick="">Confirmar</button></div>
       </div>
     </div>
-  </div>  #}
+  </div>  
 
      <script src="/scripts/deleteModal.js"></script>
 </body>

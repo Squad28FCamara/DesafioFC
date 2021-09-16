@@ -104,7 +104,7 @@ td {
   border-radius: 0 40px 40px 0;
 }
 
-#delete {
+.delete {
   cursor: pointer;
 }
 
