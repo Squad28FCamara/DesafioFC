@@ -75,8 +75,8 @@
 
     <select name="floor" id="floor">
         <option value="">Escolha o andar</option>
-        <option value="A1" id="A1" >1° Andar</option>
-        <option value="A2">2° Andar</option>
+        <option value="1" id="A1" >1° Andar</option>
+        <option value="2">2° Andar</option>
     </select>
     </section>
 
@@ -95,24 +95,15 @@
     for (let x = 1; x < 5; x++) {
       stationElements.push(document.getElementById('E' + x))
     }
-    let floor = document.getElementById("floor");
+
     function disable() {
-      floor.setAttribute("disabled", "true");
-      floor.value = "A1";
+      floorElement.value = "1";
+      floorElement.style.visibility = "hidden"
     }
 
     function able() {
-      floor.disabled = false;
-      floor.value = "";
-    }
-    function disable() {
-      floorElement.setAttribute("disabled", "true");
-      floorElement.options.selected = "first52"
-    }
-
-    function able() {
-      floorElement.disabled = false;
-      floorElement.style.visibility = "visible";
+      floorElement.value = "";
+      floorElement.style.visibility = "visible"
     }
 
     function getStationNumber() {
@@ -124,7 +115,7 @@
     }
 
     function getFormData() {
-      const floorNumber = (floorElement.value === 'first') ? 1 : 2
+      const floorNumber = (floorElement.value === '1') ? 1 : 2
       const stationNumber = getStationNumber()
       const seatNumber = seatElement.value
 
@@ -135,6 +126,7 @@
       const station = getFormData()
       const date = dateElement.value
       const pole = spElement.checked ? 'São Paulo' : 'Santos'
+
 
       localStorage.setItem('pole', pole)
       localStorage.setItem('date', date)
