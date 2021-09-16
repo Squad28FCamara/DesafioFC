@@ -2,7 +2,7 @@
 
 ### BackEnd criado por: Matheus Alves Freitas
 
-### FrontEnd criado pro: Samuel Menecucci Moraes
+### FrontEnd criado por: Samuel Menecucci Moura
 
 ------
 para iniciar o projeto é necessário que o Docker esteja instalado na máquina, a seguir estará um link mostrando o passo a passo para instalar o docker na máquina: [Instalação Docker](https://docs.docker.com/desktop/windows/install/)
