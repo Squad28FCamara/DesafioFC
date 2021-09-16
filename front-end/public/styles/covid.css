@@ -44,3 +44,18 @@
   line-height: 1.4rem;
   color: #828282;
 }
+
+@media only screen and (max-width: 1050px) {
+  .infoCovid .cards {
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    width: 100%;
+    margin-top: 54px;
+  }
+
+  .infoCovid .card {
+    width: 8.4vw;
+    height: 22.4vh;
+    text-align: center;
+  }
+}

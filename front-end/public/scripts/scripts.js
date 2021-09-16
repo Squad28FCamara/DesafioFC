@@ -1,7 +1,7 @@
 let floor = document.getElementById("floor");
 function disable() {
-  floor.setAttribute("disabled", "true");
   floor.value = "A1";
+  floor.style.visibility = "hidden";
 }
 
 function able() {

@@ -50,6 +50,43 @@
       "station": "E2",
       "seat": "C1",
       "floor": "A2"
-    }
+    },
+    {
+      "pole": "São Paulo",
+      "date": "",
+      "station": "E1",
+      "seat": "C2",
+      "floor": "A2"
+    },
+    {
+      "pole": "São Paulo",
+      "date": "2021-09-16",
+      "station": "E2",
+      "seat": "C4",
+      "floor": "A1"
+    },
+    {
+      "pole": "São Paulo",
+      "date": "2021-09-30",
+      "station": "E2",
+      "seat": "C4",
+      "floor": "A2"
+    },
+    {
+      "pole": "Santos",
+      "date": "2019-06-15",
+      "station": "E1",
+      "seat": "C1"
+    },
+    {
+      "pole": "Santos",
+      "date": "2021-09-23",
+      "station": "E1",
+      "seat": "C2",
+      "floor": "A1"
+    },
+    null,
+    null,
+    null
   ]
 }

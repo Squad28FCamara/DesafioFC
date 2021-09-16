@@ -14,7 +14,7 @@ export async function create(req, res) {
     !reservation.date ||
     !reservation.station ||
     !reservation.seat ||
-    !reservation.floor
+    reservation.floor == ""
   ) {
     console.log("Nop");
   } else {

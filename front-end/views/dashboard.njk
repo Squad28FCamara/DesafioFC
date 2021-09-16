@@ -2,10 +2,14 @@
 
 <head>
   <title>Dashboard</title>
+    <link rel="stylesheet" href="/styles/dashboard.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"/>
 </head>
 
 <body>
-  <link rel="stylesheet" href="/styles/dashMain.css" />
+ 
 
   <section class="card">
     <div class="card-title">
@@ -43,19 +47,26 @@
             {{ reservation.station }}{{ reservation.seat
             }}{{ reservation.floor }}
           </td>
-          <td id="rigth" onclick="excluir({{reservation.id}})"> <img src="delete.png" id="delete" alt="deleteReservation"> </td>
+          <td id="rigth"> <img src="delete.png" id="delete" alt="deleteReservation"> </td>
         </tr>
         {%endfor%}
       </tbody>
     </table>
+    <div class="legends">*[S = Sala; E = Estação; A = Andar]</div> 
   </section>
 
-  <script>
-     function excluir(id){
-     alert(id)
-     }
-    
-     </script>
+  {# <div class="modal-overlay">
+    <div class="modal">
+      <div class="modal-content">
+        <h1> Você tem certeza de que deseja cancelar essa reserva? </h1>
+        <img src="warning.png" alt="">
+        <p>Uma vez feita, será necessário conferir a disponibilidade da estação de trabalho em uma nova reserva.</p>
+        <div class="options"> <a href="/">Voltar</a><button id="cancel" onclick="">Confirmar</button></div>
+      </div>
+    </div>
+  </div>  #}
+
+     <script src="/scripts/deleteModal.js"></script>
 </body>
 
 {% endblock %}

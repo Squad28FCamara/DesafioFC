@@ -1,7 +1,8 @@
-const test = document.querySelector(".confirm");
+const confirmbtn = document.querySelector(".confirm");
+
 const modalOverlay = document.querySelector(".modal-overlay");
 
-test.addEventListener("click", () => {
+confirmbtn.addEventListener("click", () => {
   modalOverlay.classList.add("active");
 });
 

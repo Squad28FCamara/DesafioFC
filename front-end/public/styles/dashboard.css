@@ -65,10 +65,6 @@
   display: flex;
 }
 
-.teste {
-  display: flex;
-}
-
 .reservations {
   color: #333333;
   font-weight: 700;
@@ -88,9 +84,6 @@ table {
 
 th {
   font-size: 1.4rem;
-}
-
-tbody {
 }
 
 tbody tr {
@@ -123,4 +116,91 @@ td {
 
 .reservations div {
   font-size: 16px;
+}
+
+.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 80%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal {
+  background-color: #f8f8f8;
+  border-radius: 40px;
+  width: 422px;
+  height: 302px;
+  margin: 30vh auto;
+  position: relative;
+}
+
+.modal .close-modal {
+  color: black;
+  position: absolute;
+  right: 20px;
+  top: 8px;
+  cursor: pointer;
+}
+
+.modal-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.modal-content h1 {
+  color: #fe4400;
+}
+
+.modal-content p {
+  width: 344px;
+  color: var(--color-cinza2);
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+}
+
+.modal-content img {
+  margin-top: 13px;
+  margin-bottom: 19px;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.options {
+  width: 267px;
+  margin-top: 26px;
+}
+
+.options a {
+  margin-right: 19px;
+  text-decoration: none;
+  font-size: 1.4rem;
+  line-height: 1.7;
+}
+
+#cancel {
+  background-color: #fe4400;
+  width: 162px;
+  height: 35px;
+  border-radius: 10px;
+  color: var(--color-branco);
+  font-weight: 700;
+}
+
+.legends {
+  font-size: 1.4rem;
+  color: var(--color-cinza3);
+  line-height: 1.7rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: right;
 }

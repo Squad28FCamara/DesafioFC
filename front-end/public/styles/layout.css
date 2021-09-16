@@ -135,4 +135,13 @@
     position: fixed;
     width: 100%;
   }
+
+  .container header {
+    width: 100%;
+  }
+
+  .container header .user {
+    visibility: hidden;
+    opacity: 0;
+  }
 }
