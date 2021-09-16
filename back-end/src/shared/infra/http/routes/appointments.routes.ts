@@ -5,6 +5,7 @@ import { getCustomRepository } from 'typeorm';
 import AppointmentsRepository from '@modules/appointments/repositories/appointmentsRepository';
 import CreateAppointment from '@modules/appointments/services/createAppointment';
 import ensureAuthenticated from '@modules/users/infra/http/middlewares/ensureAuthenticated';
+import DeleteAppointment from '@modules/appointments/services/deleteAppointments';
 
 const appointmentsRouter = Router();
 
@@ -45,6 +46,21 @@ appointmentsRouter.get('/user', async (request, response) => {
   });
 
   return response.json(appointments);
+});
+
+appointmentsRouter.delete('/:id', async (request, response) => {
+  const providerId = request.user.id;
+  const id = request.params.id;
+
+  const deleteAppointmentsService = new DeleteAppointment();
+
+  await deleteAppointmentsService.execute({
+    providerId,
+    id,
+  });
+  return response.json({
+    message: 'success',
+  });
 });
 
 export default appointmentsRouter;

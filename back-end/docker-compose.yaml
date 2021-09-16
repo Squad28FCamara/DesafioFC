@@ -1,0 +1,32 @@
+version: "3"
+
+services:
+
+  backend:
+    depends_on: [database]
+    build:
+      context: .
+      dockerfile: Back.Dockerfile
+    image: fcfrontendimage
+    ports: [3333:3333]
+    networks: [hackathon]
+
+  frontend:
+    depends_on: [backend]
+    build:
+      context: .
+      dockerfile: Front.Dockerfile
+    image: fcbackendimage
+    ports: [3000:3000]
+    networks: [hackathon]
+
+  database:
+    image: postgres
+    ports: [5432:5432]
+    environment:
+      POSTGRES_PASSWORD: docker
+      POSTGRES_DB: postgres
+
+networks:
+  hackathon:
+    driver: bridge

@@ -1,6 +1,7 @@
-import { getRepository } from 'typeorm';
+import { getCustomRepository } from 'typeorm';
 
-import Appointment from '@modules/appointments/infra/typeorm/entities/Appointment';
+import AppointmentsRepository from '@modules/appointments/repositories/appointmentsRepository';
+import AppError from '@shared/errors/AppError';
 
 interface IDeleteAppointment {
   providerId: string;
@@ -8,10 +9,19 @@ interface IDeleteAppointment {
 }
 
 class DeleteAppointment {
-  public async execute(deleteAppointmentData: IDeleteAppointment) {
-    const appointmentsRepository = getRepository(Appointment);
+  public async execute({ providerId, id }: IDeleteAppointment) {
+    const appointmentsRepository = getCustomRepository(AppointmentsRepository);
+    const appointment = await appointmentsRepository.findOne({
+      where: {
+        providerId,
+        id,
+      },
+    });
 
-    await appointmentsRepository.delete(deleteAppointmentData);
+    if (!appointment) {
+      throw new AppError('cannot find the appointment', 404);
+    }
+    await appointmentsRepository.delete(appointment.id);
   }
 }
 
