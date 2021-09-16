@@ -4,9 +4,9 @@
    "description": "",
    "main": "server.ts",
    "scripts": {
-      "dev": "ts-node-dev -r tsconfig-paths/register --transpile-only --clear src/shared/infra/http/server.ts",
-      "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli.js",
-      "start": "ts-node src/index.ts"
+      "deploy": "yarn typeorm migration:run && yarn start",
+      "start": "ts-node-dev -r tsconfig-paths/register --transpile-only --clear src/shared/infra/http/server.ts",
+      "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli.js"
    },
    "keywords": [],
    "author": "Matheus Freitas",

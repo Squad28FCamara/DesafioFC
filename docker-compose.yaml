@@ -6,8 +6,8 @@ services:
     depends_on: [database]
     build:
       context: .
-      dockerfile: Back.Dockerfile
-    image: fcfrontendimage
+      dockerfile: back.Dockerfile
+    image: fcbackendimage
     ports: [3333:3333]
     networks: [hackathon]
 
@@ -15,8 +15,8 @@ services:
     depends_on: [backend]
     build:
       context: .
-      dockerfile: Front.Dockerfile
-    image: fcbackendimage
+      dockerfile: front.Dockerfile
+    image: fcfrontendimage
     ports: [3000:3000]
     networks: [hackathon]
 
@@ -25,7 +25,8 @@ services:
     ports: [5432:5432]
     environment:
       POSTGRES_PASSWORD: docker
-      POSTGRES_DB: postgres
+      POSTGRES_DB: desafioFC_postgres
+    networks: [hackathon]
 
 networks:
   hackathon:
