@@ -90,9 +90,6 @@ th {
   font-size: 1.4rem;
 }
 
-tbody {
-}
-
 tbody tr {
   text-align: center;
   background-color: var(--color-cinza5);
