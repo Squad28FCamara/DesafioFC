@@ -1,0 +1,126 @@
+.card {
+  min-width: 279px;
+  min-height: 228px;
+  width: 28.5vw;
+  height: 36.7vh;
+  background-color: var(--color-cinza5);
+  border-radius: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 38px;
+  margin-left: 288px;
+  box-shadow: -9px 10px 6px 1px rgba(0, 0, 0, 0.2);
+}
+
+.card .card-title h2 {
+  color: var(--color-cinza1);
+  line-height: 22px;
+  margin-bottom: 21px;
+  min-width: 108px;
+  width: 14vw;
+}
+
+.card .card-title {
+  color: var(--color-cinza3);
+  margin-left: 35px;
+  min-width: 166px;
+  width: 16.3vw;
+  font-size: 1.4rem;
+}
+
+.card img {
+  min-width: 92px;
+  min-height: 150px;
+  width: 7.7vw;
+  height: 28.6vh;
+}
+
+.card button {
+  margin-top: 29px;
+  width: 168.29px;
+  height: 31.28px;
+  border-radius: 13px;
+  background-color: #fe4400;
+  color: var(--color-branco);
+  cursor: pointer;
+}
+
+.reservations-info {
+  margin-left: 9.7vw;
+  margin-top: 6.5vh;
+}
+
+.reservations-info h1 {
+  line-height: 2.9rem;
+  color: var(--color-cinza1);
+}
+
+.reservations-info p {
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  color: var(--color-cinza3);
+}
+.titles {
+  display: flex;
+}
+
+.teste {
+  display: flex;
+}
+
+.reservations {
+  color: #333333;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+  /* display: flex;
+  justify-content: space-around; */
+  width: 40.2vw;
+  margin: auto;
+  margin-top: 28px;
+  min-width: 390px;
+}
+
+table {
+  width: 672px;
+}
+
+th {
+  font-size: 1.4rem;
+}
+
+tbody {
+}
+
+tbody tr {
+  text-align: center;
+  background-color: var(--color-cinza5);
+}
+
+td {
+  font-size: 16px;
+  padding: 8px;
+}
+
+.left {
+  border-radius: 40px 0 0 40px;
+}
+
+.rigth {
+  border-radius: 0 40px 40px 0;
+}
+
+#delete {
+  cursor: pointer;
+}
+
+.reservations h5 {
+  font-size: 1.6rem;
+  color: #333333;
+  line-height: 1.7rem;
+}
+
+.reservations div {
+  font-size: 16px;
+}

@@ -1,0 +1,55 @@
+{% extends 'layout.njk' %} {% block content %}
+
+<head>
+  <title>COVID-19</title>
+<link rel="stylesheet" href="/styles/covid.css">
+</head>
+
+<body>
+  
+  <section class="infoCovid">
+    <div class="title">
+      <h1>COVID-19</h1>
+      <p>Confira as medidas de segurança adotadas pela FCamara para garantir um retorno presencial seguro.</p>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+          <img src="distanciamento.png" alt="" srcset="">
+          <p>As estações de trabalho foram organizadas para respeitar o distânciamento social.</p>
+        </div>
+
+        <div class="card">
+          <img src="limpeza.png" alt="" srcset="">
+          <p>Redobramos a limpeza e recursos para cuidados nos escritórios.</p>
+        </div>
+
+        <div class="card">
+          <img src="mascara.png" alt="" srcset="">
+          <p>O uso de máscaras é obrigatório nas dependências da empresa.</p>
+        </div>
+
+        <div class="card">
+          <img src="ocupacao.png" alt="" srcset="">
+          <p>Respeitando o atual decreto do Plano SP, disponibilizamos apenas 40% de nossa ocupação total.</p>
+        </div>
+
+        <div class="card">
+          <img src="vacinas.png" alt="" srcset="">
+          <p>Para garantir a sua segurança, apenas consultores com o comprovante das duas doses poderão entrar nos escritórios.</p>
+        </div>
+
+        <div class="card">
+          <img src="temperatura.png" alt="" srcset="">
+          <p>Medidores de temperatura na portaria das filiais.</p>
+        </div>
+    </div>
+
+
+  </section>
+
+
+</body>
+
+{% endblock %}

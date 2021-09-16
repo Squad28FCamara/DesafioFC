@@ -1,0 +1,59 @@
+<head>
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <title>Login</title>
+  <link rel="stylesheet" href="/styles/login.css" />
+</head>
+
+<body>
+  <div class="logo"><img src="orangeDesk.png" alt="" /></div>
+
+  <div class="login">
+    <div class="title"><h2>Acessar Portal</h2></div>
+
+    <div class="forms">
+
+      <div id="emailDiv">
+        <p>E-mail</p>
+        <input type="email" id="email" />
+      </div>
+      <div id="senha">
+        <p>Senha</p>
+        <input type="password" name="" id="password"/>
+      </div>
+        <button onclick="sendData()">Acessar</button>
+      <p class="sessionError" id="sessionError"></p>
+  </div>
+
+    </form>
+  </div>
+  <script>
+      const emailElement = document.getElementById('email')
+      const passwordElement = document.getElementById('password')
+      const sessionErrorElement = document.getElementById('sessionError')
+
+      async function sendData() {
+        const password = passwordElement.value
+        const email = emailElement.value
+
+          const result = await fetch('http://localhost:3333/sessions', {
+            method: 'POST',
+            body: JSON.stringify({ password, email }),
+            headers: {
+              "Accept": "application/json, text/plain, */*",
+              "Content-Type": "application/json"
+            },
+          })
+
+          if (result.status === 200) {
+            const backEndReturn = await result.json();
+
+            localStorage.setItem('token', backEndReturn.token)
+            localStorage.setItem('name', backEndReturn.user.name)
+
+            return window.location.replace('http://localhost:3000/')
+          }
+
+          sessionErrorElement.innerHTML = "Senha ou email incorretos"
+    }
+  </script>
+</body>

@@ -1,0 +1,117 @@
+{% extends 'layout.njk' %}
+
+{% block content %}
+
+<head>
+  <title>Dashboard</title>
+</head>
+
+<body>
+  <link rel="stylesheet" href="/styles/dashMain.css" />
+
+  <section class="card">
+    <div class="card-title">
+      <h2>Informações sobre COVID-19</h2>
+      <div class="card-content">
+        Conheça os protocolos de segurança adotados para um retorno presencial
+        seguro
+      </div>
+      <button onclick="window.location.href='/covid'">Saiba Mais</button>
+    </div>
+    <img src="cardImage.png" alt="" />
+  </section>
+
+  <div class="reservations-info">
+    <h1>Reservas recentes</h1>
+    <p>Confira e gerencie as suas últimas reservas</p>
+  </div>
+
+  <section class="reservations">
+    <table cellspacing="0">
+      <thead>
+        <tr>
+          <th>Polo</th>
+          <th>Agendado Para</th>
+          <th>Estação</th>
+          <th>Cancelar reserva</th>
+        </tr>
+      </thead>
+      <tbody id="coisas">
+        <tr>
+
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <script>
+     const token = localStorage.getItem('token')
+
+
+  const coisas = document.getElementById('coisas')
+
+  async function deleteAppointment(event) {
+    const result = await fetch('http://localhost:3333/appointments/' + event.target.id, {
+      method: 'DELETE',
+      headers: {
+        "Accept": "application/json, text/plain, */*",
+        'Authorization': 'Bearer ' + token
+      }
+    })
+
+    if (result.status === 200) {
+      event.target.parentNode.parentNode.removeChild(event.target.parentNode)
+    }
+  }
+
+  async function findAppointments() {
+    const result = await fetch('http://localhost:3333/appointments/user', {
+      method: 'GET',
+      headers: {
+        "Accept": "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+        'Authorization': 'Bearer ' + token
+      },
+    })
+
+    if (result.status !== 200) {
+      window.location.replace('http://localhost:3000/login')
+    }
+
+    const data = await result.json()
+
+    data.forEach((appointment) => {
+      const createDiv = document.createElement('tr')
+
+      const poleDiv = document.createElement('td')
+      const poleText = document.createTextNode(appointment.pole)
+      poleDiv.appendChild(poleText)
+      createDiv.appendChild(poleDiv)
+
+      const dateDiv = document.createElement('td')
+      const dateText = document.createTextNode(appointment.date.split('T')[0])
+      dateDiv.appendChild(dateText)
+      createDiv.appendChild(dateDiv)
+
+      const estationDiv = document.createElement('td')
+      const estationText = document.createTextNode(appointment.station)
+      estationDiv.appendChild(estationText)
+      createDiv.appendChild(estationDiv)
+
+      const imageDiv = document.createElement('img')
+      imageDiv.src = 'delete.png'
+      imageDiv.onclick = deleteAppointment
+      imageDiv.id = appointment.id
+      createDiv.appendChild(imageDiv)
+
+      coisas.appendChild(createDiv)
+    })
+  }
+
+  findAppointments();
+
+
+     </script>
+</body>
+
+{% endblock %}

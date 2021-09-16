@@ -1,0 +1,46 @@
+.infoCovid {
+  margin-top: 2.5vh;
+  margin-left: 8.3vw;
+}
+
+.infoCovid .title h1 {
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+  margin-bottom: 5px;
+  color: var(--color-cinza1);
+}
+
+.infoCovid .title p {
+  font-size: 1.4rem;
+  min-width: 253px;
+  min-height: 67px;
+
+  line-height: 1.7rem;
+  width: 27vw;
+  color: var(--color-cinza3);
+}
+
+.infoCovid .cards {
+  display: grid;
+  min-width: 554px;
+  min-height: 421px;
+  grid-template-columns: repeat(3, 1fr);
+  width: 52vw;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.infoCovid .card {
+  width: 14.2vw;
+  min-width: 156px;
+  height: 27vh;
+  min-height: 192px;
+  text-align: center;
+}
+
+.infoCovid .card p {
+  margin-top: 16px;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  color: #828282;
+}

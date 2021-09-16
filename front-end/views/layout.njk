@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+{%block layout%}
+
+<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+<div class="container">
+
+<header>
+    <div class="area">{{ location }}</div>
+    <div class="user" id="user"><img id="imageUser" src="notification.png" alt="" /></div>
+    <link rel="stylesheet" href="/styles/layout.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </header>
+
+<section class="menu">
+    <div class="logo"><img src="orangeDesk.png" alt=""></div>
+    <div class="links">
+      <a href="/" class="dash {{ 'styled' if location == 'Dashboard' }}">
+      <span><img src="home.png" alt="" /></span>
+      Dashboard
+      </a>
+      <a href="/reserve" class="calendar {{ 'styled' if location == 'Reservar' }}" >
+      <span> <img src="calendar.png" alt="" /></span>
+      Reservar</a>
+      <a href="/covid" class="covid {{ 'styled' if location == 'COVID-19' }}">
+      <span><img src="covid.png" alt="" /></span>
+       COVID-19</a>
+      <a href="">
+        <span><img src="config.png" alt="" /></span>
+         Configurações</a>
+    </div>
+</section>
+
+<main>
+  {% block content%} {%endblock%}
+</main>
+
+</div>
+<script>
+  const name = localStorage.getItem('name')
+
+  if(!name) {
+    window.location.replace('http://localhost:3000/login')
+  }
+  const imageElement = document.getElementById('imageUser')
+  const textNode = document.createTextNode(name)
+
+  imageElement.parentNode.insertBefore(textNode, imageElement)
+
+</script>
+
+
+{%endblock%}
