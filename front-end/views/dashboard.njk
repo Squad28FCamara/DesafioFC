@@ -32,23 +32,24 @@
         <tr>
           <th>Polo</th>
           <th>Agendado Para</th>
-          <th>Estação</th>
+          <th>Estação*</th>
           <th>Cancelar reserva</th>
         </tr>
       </thead>
-      <tbody id="coisas">
+      <tbody id="getId">
         <tr>
 
         </tr>
       </tbody>
     </table>
+    <div class="legends">*[A = Andar; E = Estação; S = Sala]</div>
   </section>
 
   <script>
      const token = localStorage.getItem('token')
 
 
-  const coisas = document.getElementById('coisas')
+  const getId = document.getElementById('getId')
 
   async function deleteAppointment(event) {
     const result = await fetch('http://localhost:3333/appointments/' + event.target.id, {
@@ -104,12 +105,11 @@
       imageDiv.id = appointment.id
       createDiv.appendChild(imageDiv)
 
-      coisas.appendChild(createDiv)
+      getId.appendChild(createDiv)
     })
   }
 
   findAppointments();
-
 
      </script>
 </body>
