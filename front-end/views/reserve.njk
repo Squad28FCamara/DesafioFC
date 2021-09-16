@@ -7,7 +7,7 @@
 </head>
 
 <body>
-  <link rel="stylesheet" href="reserve.css" />
+  <link rel="stylesheet" href="/styles/reserve.css" />
 
   <div class="info">
     <h1>Reserve uma estação de trabalho</h1>
@@ -17,45 +17,47 @@
     </p>
   </div>
 
-  <div class="formzin">
+  <div class="formclass" method="POST" action="reserve">
     <section class="pole-and-date">
       <h1>Selecione o polo de negócio e data desejada</h1>
       <span>
-        <input type="radio" name="pole" id="sp" value="São Paulo" onclick="able()" checked />
-        <label for="">São Paulo</label>
+        <input type="radio" name="pole" value="São Paulo" onclick="able()" checked id="sp" />
+        <label for="sp">São Paulo</label>
         <input
           type="radio"
           name="pole"
           id="santos"
           value="Santos"
           onclick="disable()"
-        /> <label for="">Santos</label>
-        <input type="date" name="date" id="date"/>
+          id="sts"
+        /> <label for="sts">Santos</label>
+        <input type="date" id="date" name="date" />
       </span>
     </section>
 
-<h2 class="that">Escolha a estação e lugar desejado: </h2>
+    <h2 class="titleStation">Escolha a estação e lugar desejado: </h2>
 
-    <div class="bla">
+    <div class="station-container">
 
-        <section class="station">
+        <section class="stations">
+
         <div class="station">
-            <span><input type="radio" name="station" value="E1" id="E1" checked><label for="E1">Estação 01</label></span>
+            <span><input type="radio" name="station" value="E1" id="E1" checked><label for="E1">Sala de Reunião 1</label></span>
             <img src="station.png" alt="">
         </div>
 
         <div class="station">
-            <span> <input type="radio" name="station" value="E2" id="E2"><label for="E2">Estação 02</label></span>
+            <span> <input type="radio" name="station" value="E2" id="E2"><label for="E2">Sala de Reunião 2</label></span>
             <img src="station2.png" alt="" >
         </div>
 
          <div class="station">
-            <span><input type="radio" name="station"  value="E3" id="E3"><label for="E3">Estação 03</label></span>
+            <span><input type="radio" name="station"  value="E3" id="E3"><label for="E3">Sala de Reunião 3</label></span>
             <img src="station3.png" alt="">
         </div>
 
          <div class="station">
-            <span><input type="radio" name="station" value="E4" id="E4"><label for="E4">Estação 04</label></span>
+            <span><input type="radio" name="station" value="E4" id="E4"><label for="E4">Sala de Reunião 4</label></span>
             <img src="station.png" alt="">
         </div>
     </section>
@@ -63,23 +65,23 @@
     <section class="floor-and-seat">
         <select name="seat" id="seat">
           <option value="">Escolha o seu lugar</option>
-        <option value="01">01</option>
-        <option value="02">02</option>
-        <option value="03">03</option>
-        <option value="04">04</option>
-        <option value="05">05</option>
-        <option value="06">06</option>
+          <option value="01">01</option>
+          <option value="02">02</option>
+          <option value="03">03</option>
+          <option value="04">04</option>
+          <option value="05">05</option>
+          <option value="06">06</option>
     </select>
 
     <select name="floor" id="floor">
-        <option value="">Escolha o Andar</option>
-        <option value="F1">1° Andar</option>
-        <option value="F2">2° Andar</option>
+        <option value="">Escolha o andar</option>
+        <option value="A1" id="A1" >1° Andar</option>
+        <option value="A2">2° Andar</option>
     </select>
     </section>
 
     </div>
-    <button onclick="submit()" window.location.href="/review"">Próximo</button>
+    <button class="nextbutton" onclick="submit()">Próximo</button>
 
   </div>
 
@@ -93,7 +95,16 @@
     for (let x = 1; x < 5; x++) {
       stationElements.push(document.getElementById('E' + x))
     }
+    let floor = document.getElementById("floor");
+    function disable() {
+      floor.setAttribute("disabled", "true");
+      floor.value = "A1";
+    }
 
+    function able() {
+      floor.disabled = false;
+      floor.value = "";
+    }
     function disable() {
       floorElement.setAttribute("disabled", "true");
       floorElement.options.selected = "first52"
@@ -120,23 +131,15 @@
       return `A${floorNumber}E${stationNumber}C${seatNumber}`
     }
 
-    async function submit() {
+    function submit() {
       const station = getFormData()
       const date = dateElement.value
       const pole = spElement.checked ? 'São Paulo' : 'Santos'
-      const token = localStorage.getItem('token')
 
-      const appointment = await fetch('http://localhost:3333/appointments', {
-        method: 'POST',
-        body: JSON.stringify({ station, date, pole }),
-        headers: {
-          "Accept": "application/json, text/plain, */*",
-          "Content-Type": "application/json",
-          "Authorization": "Bearer " + token
-        },
-
-      })
-      console.log(appointment)
+      localStorage.setItem('pole', pole)
+      localStorage.setItem('date', date)
+      localStorage.setItem('station', station)
+      window.location.replace("http://localhost:3000/review")
     }
 
   </script>

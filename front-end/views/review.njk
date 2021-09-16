@@ -2,39 +2,41 @@
 
 {%block content%}
 
-<link rel="stylesheet" href="review.css">
+<link rel="stylesheet" href="/styles/review.css">
+
 <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"/>
 
 <body>
-  <div class="confirmation">
+  <div class="confirmation-info">
     <h1>Confirmação</h1>
     <p>Confira os dados de sua reserva</p>
-
+  </div>
     <section class="reservations">
 
-  <div class="pole">
-    <h5>Polo</h5>
-     <div>{{reservation.pole}}  
-     </div>    
+  <table cellspacing="0">
+      <thead>
+        <tr>
+          <th>Polo</th>
+          <th>Agendado Para</th>
+          <th>Estação</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td id="pole"></td>
+          <td id="date"></td>
+          <td id="station"></td>
+
+        </tr>
+      </tbody>
+    </table>
+
+  <div class="formclass">
+    <a href="/reserve">Voltar</a> <button type="submit" class="confirm" onclick="maisSerioDessaVez()">Confirmar</button>
   </div>
 
-
-  <div class="date">
-    <h5>Agendado para</h5>
-    <div>{{reservation.date}}</div> 
-  </div>
-
-  <div class="estation">
-    <h5>Estação</h5>
-    <div>{{reservation.station}}{{reservation.seat}}</div> 
-  </div>
-
-  <form action="/confirmation" method="post">
-    <button type="submit" class="confirm">Confirmar</button>
-  </form>
-  </div>
 
   <div class="modal-overlay">
     <div class="modal">
@@ -43,13 +45,45 @@
         </a>
       <div class="modal-content">
         <h1> Reserva confirmada! </h1>
-        <img src="confirmation.png" alt="">
-        <p>Você acaba de confirmar a sua reserva. Para conferir maiores informações, acesse "Minhas Reservas".</p>
+        <img src="confirmed.png" alt="">
+        <p>Você acaba de confirmar a sua reserva. Para gerenciá-la, acesse “Minhas Reservas” em sua Dashboard. </p>
       </div>
     </div>
   </div>
 
-<script src="modal.js"></script>
+<script src="/scripts/modal.js"></script>
+<script>
+  const date = localStorage.getItem('date')
+  const station = localStorage.getItem('station')
+  const pole = localStorage.getItem('pole')
+  const token = localStorage.getItem('token')
+
+  const dateElement = document.getElementById('date')
+  const poleElement = document.getElementById('pole')
+  const stationElement = document.getElementById('station')
+
+  dateElement.appendChild(document.createTextNode(date))
+  poleElement.appendChild(document.createTextNode(pole))
+  stationElement.appendChild(document.createTextNode(station))
+
+  async function maisSerioDessaVez() {
+    const result = await fetch('http://localhost:3333/appointments', {
+      method: 'POST',
+      body: JSON.stringify({ station, date, pole }),
+      headers: {
+        "Accept": "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+        "Authorization": "Bearer " + token
+      },
+    })
+
+    if (result.status === 200) {
+      setTimeout(() => {
+        window.location.replace('http://localhost:3000')
+      }, 3000)
+    }
+  }
+</script>
 
 </body>
 

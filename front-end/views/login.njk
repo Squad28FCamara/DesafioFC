@@ -1,10 +1,11 @@
 <head>
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
   <title>Login</title>
-  <link rel="stylesheet" href="login.css" />
+  <link rel="stylesheet" href="/styles/login.css" />
 </head>
 
 <body>
-  <div class="logo"><img src="fcamara-logo.png" alt="" /></div>
+  <div class="logo"><img src="orangeDesk.png" alt="" /></div>
 
   <div class="login">
     <div class="title"><h2>Acessar Portal</h2></div>
@@ -23,7 +24,9 @@
       <p class="sessionError" id="sessionError"></p>
   </div>
 
-    <script>
+    </form>
+  </div>
+  <script>
       const emailElement = document.getElementById('email')
       const passwordElement = document.getElementById('password')
       const sessionErrorElement = document.getElementById('sessionError')
@@ -45,11 +48,12 @@
             const backEndReturn = await result.json();
 
             localStorage.setItem('token', backEndReturn.token)
+            localStorage.setItem('name', backEndReturn.user.name)
 
             return window.location.replace('http://localhost:3000/')
           }
 
           sessionErrorElement.innerHTML = "Senha ou email incorretos"
     }
-    </script>
+  </script>
 </body>

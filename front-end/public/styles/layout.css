@@ -44,14 +44,14 @@
 }
 
 .container header .area {
-  margin-left: 5.2vw;
+  margin-left: 89px;
 }
 
 .container header .user {
   display: flex;
   align-items: center;
   height: 2.2vw;
-  margin-right: 5.2vw;
+  margin-right: 5vw;
 }
 
 .container header .user img {
@@ -59,7 +59,7 @@
 }
 
 .menu {
-  background-color: #333333;
+  background-color: #2a2962;
   width: 20.83vw;
   height: 100vh;
   grid-area: nav;
@@ -77,9 +77,15 @@
   width: 100%;
 }
 
+.menu .links span {
+  width: 38px;
+  text-align: center;
+}
+
 .menu .links {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 13.28vw;
   margin: auto;
 }
@@ -89,12 +95,27 @@
 }
 
 .menu a {
-  color: #828282;
+  color: #a8a8d0;
   text-decoration: none;
   font-size: 1.4rem;
   margin-bottom: 3.56vh;
   display: flex;
   align-items: center;
+}
+
+.dash.styled {
+  color: white;
+  font-weight: 700;
+}
+
+.calendar.styled {
+  color: white;
+  font-weight: 700;
+}
+
+.covid.styled {
+  color: white;
+  font-weight: 700;
 }
 
 .container main {
@@ -105,7 +126,7 @@
   background-color: red;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1050px) {
   .menu {
     visibility: hidden;
   }

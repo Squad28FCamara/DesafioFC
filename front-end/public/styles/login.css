@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 
 body {
-  background-color: rgb(228, 228, 228);
+  background-color: #2a2962;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -9,9 +9,14 @@ body {
   font-size: 61.5%;
 }
 
+.logo {
+  margin-bottom: 105px;
+  text-align: center;
+}
+
 .login {
-  width: 62vw;
-  height: 71vh;
+  width: 50vw;
+  height: 54vh;
   background-color: white;
   border-radius: 20px;
   margin: auto
@@ -41,24 +46,16 @@ body {
   align-items: center;
 }
 
-.recuperar {
-  width: 47vw;
-  display: flex;
-  justify-content: end;
-  margin-top: 29px;
-  font-size: 1.6rem;
-}
-
 input {
-  width: 47vw;
-  height: 5.5vh;
-
+  width: 38vw;
+  height: 5vh;
 }
 
 button {
-  width: 47vw;
-  height: 7.3vh;
-  background-color: #2f2f2f;
+  min-width: 142px;
+  width: 15.1vw;
+  height: 6.3vh;
+  background-color: #fe4400;
   border-radius: 20px;
   margin-top: 49px;
   font-size: 2.3rem;
