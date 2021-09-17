@@ -59,3 +59,11 @@ Rota disponível para User:
 </ul>
 
 > informações mais detalhadas pode ser encontrada na documentação [Postman](https://documenter.getpostman.com/view/17479822/U16opj7N)
+
+## Informações do Frontend
+
+A aplicação foi feita utilizando HTML, CSS, JavaScript e Nunjucks como template engine. 
+
+O projeto completo com a integração do backend e do frontend está na branch master. 
+
+A branch fontCopy possui uma uma versão com algumas alterações e sem a integração do backend.
