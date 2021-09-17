@@ -113,3 +113,12 @@ form a {
   opacity: 1;
   visibility: visible;
 }
+
+.legends {
+  font-size: 1.4rem;
+  color: var(--color-cinza3);
+  line-height: 1.7rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: right;
+}
